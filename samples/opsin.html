@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Using the OPSIN API in Python &#8212; IUPAC FAIR Chemistry Cookbook</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="FAIR basics for Chemistry" href="../school.html" />
     <link rel="prev" title="Structured UV/Vis (meta)data for small molecule characterisation" href="uvvis_metadata.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -465,7 +464,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="using-the-opsin-api-in-python">
-<h1>Using the OPSIN API in Python<a class="headerlink" href="#using-the-opsin-api-in-python" title="Permalink to this heading">#</a></h1>
+<h1>Using the OPSIN API in Python<a class="headerlink" href="#using-the-opsin-api-in-python" title="Permalink to this headline">#</a></h1>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<div class="sd-summary-down docutils">
@@ -500,11 +499,11 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 </div>
 </details><p>View this recipe in Binder!: <a class="reference external" href="https://mybinder.org/v2/gh/IUPAC/WFChemCookbook/main?urlpath=tree/book/samples/opsin.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
 <section id="about-opsin">
-<h2>About OPSIN<a class="headerlink" href="#about-opsin" title="Permalink to this heading">#</a></h2>
+<h2>About OPSIN<a class="headerlink" href="#about-opsin" title="Permalink to this headline">#</a></h2>
 <p>OPSIN is a web tool for converting an IUPAC systematic name into chemical identifiers, chemical markup language (CML) XML and images of molecules.  It is written in Java (GitHub repository) and accessed via a <a class="reference external" href="https://opsin.ch.cam.ac.uk">web form</a> (for humans), or its <a class="reference external" href="https://opsin.ch.cam.ac.uk/instructions.html">API</a> (for machines).  More information about OPSIN can be found here (<a class="reference external" href="https://opsin.ch.cam.ac.uk/information.html">website</a>) or here (<a class="reference external" href="https://pubs.acs.org/articlesonrequest/AOR-PcYgSy87ettZWfqyvHmN">paper</a>).</p>
 </section>
 <section id="step-1-import-the-python-packages">
-<h2>Step 1: Import the Python packages<a class="headerlink" href="#step-1-import-the-python-packages" title="Permalink to this heading">#</a></h2>
+<h2>Step 1: Import the Python packages<a class="headerlink" href="#step-1-import-the-python-packages" title="Permalink to this headline">#</a></h2>
 <p>The following Python packages are installed in order to run the Python code.  Any package imported using ‘from’ is code developed by someone from the Python community (and typically made available to the community via <a class="reference external" href="https://pypi.org">pypi.org</a>), while a package imported starting with ‘import’ is native to Python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -518,7 +517,7 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 </div>
 </section>
 <section id="step-2-call-the-opsin-data-api">
-<h2>Step 2: Call the OPSIN data API<a class="headerlink" href="#step-2-call-the-opsin-data-api" title="Permalink to this heading">#</a></h2>
+<h2>Step 2: Call the OPSIN data API<a class="headerlink" href="#step-2-call-the-opsin-data-api" title="Permalink to this headline">#</a></h2>
 <p>Calling an OPSIN API involves adding an IUPAC systematic name to the end of the base OPSIN API endpoint (see the path variable).
 The format of the API request is ‘<a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/">https://opsin.ch.cam.ac.uk/opsin/</a>&lt;systematicname&gt;.json’.  This call returns data as in JSON format
 even if the request does not work. If the request does not work the name provided is either no recognized or is not a systematic name.
@@ -552,7 +551,7 @@ In the example below, the ‘cml’ data in the JSON retrieved is removed to imp
 </div>
 </section>
 <section id="step-3-call-the-opsin-image-api">
-<h2>Step 3: Call the OPSIN image API<a class="headerlink" href="#step-3-call-the-opsin-image-api" title="Permalink to this heading">#</a></h2>
+<h2>Step 3: Call the OPSIN image API<a class="headerlink" href="#step-3-call-the-opsin-image-api" title="Permalink to this headline">#</a></h2>
 <p>To request an image, rather than the JSON data (above), appending ‘.png’ (<a class="reference external" href="https://en.wikipedia.org/wiki/PNG">portable network graphic</a>) or ‘.svg’ (<a class="reference external" href="https://en.wikipedia.org/wiki/SVG">scaled vector graphics</a>) instead of ‘.json’ will send back and image of a molecule if the name can be interpretted. The format of the API request is ‘<a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/">https://opsin.ch.cam.ac.uk/opsin/</a>&lt;systematicname&gt;.png’ for a ‘.png’ file and ‘<a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/">https://opsin.ch.cam.ac.uk/opsin/</a>&lt;systematicname&gt;.svg’ for an ‘.svg’ file.</p>
 <p><strong><em>NOTE</em></strong>: Other options for images can be found at the <a class="reference external" href="https://cactus.nci.nih.gov/chemical/structure">Chemical Identifier Resolver</a> from the US NIH, see this blog <a class="reference external" href="https://cactus.nci.nih.gov/blog/?p=136">https://cactus.nci.nih.gov/blog/?p=136</a>.</p>
 <div class="cell docutils container">
@@ -568,7 +567,7 @@ In the example below, the ‘cml’ data in the JSON retrieved is removed to imp
 </div>
 </section>
 <section id="step-4-extract-the-formula-of-the-substance">
-<h2>Step 4: Extract the formula of the substance<a class="headerlink" href="#step-4-extract-the-formula-of-the-substance" title="Permalink to this heading">#</a></h2>
+<h2>Step 4: Extract the formula of the substance<a class="headerlink" href="#step-4-extract-the-formula-of-the-substance" title="Permalink to this headline">#</a></h2>
 <p>An InChI string contains the molecular formula of the compound as part of the string.  Using regular expressions (formatted strings that match patterns in other text strings), also referred to as ‘regex’, you can find patterns in strings and extract them, or use them to create new strings.  Below, the ‘1S’ part of a standard InChI string is used to anchor a regular expression to match the molecular formula (see note).  The string ‘(.+)’ means “match any character multiple times, in a sequence until you find a ‘)’ character. The ‘?’ is required to stop the regex from being ‘greedy’, matching the string all the way to the last ‘/’ in the InChI string, rather than stopping at the first, like we want.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -591,7 +590,7 @@ Formula: C3H6O
 </div>
 </section>
 <section id="step-5-try-other-queries">
-<h2>Step 5: Try other queries<a class="headerlink" href="#step-5-try-other-queries" title="Permalink to this heading">#</a></h2>
+<h2>Step 5: Try other queries<a class="headerlink" href="#step-5-try-other-queries" title="Permalink to this headline">#</a></h2>
 <p>By changing the value of the ‘name’ variable in Step 2 and rerunning Steps 2, 3 and 4, you can retrieve data, get the image and formula for other molecules.  Try a molecule that is larger like ‘2-[3-[(4-amino-2-methylpyrimidin-5-yl)methyl]-4-methyl-1,3-thiazol-3-ium-5-yl]ethanol’.
 If you delete (or comment out line 6 in the code of Step 2 by putting a ‘# ‘ in front of the code) you will also see the CML XML in the output.</p>
 </section>

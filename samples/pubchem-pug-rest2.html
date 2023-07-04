@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Accessing PubChem through PUG-REST: Part II &#8212; IUPAC FAIR Chemistry Cookbook</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Accessing PubChem through PUG-REST: Part III" href="pubchem-pug-rest3.html" />
     <link rel="prev" title="Accessing PubChem through PUG-REST - Part I" href="pubchem-pug-rest1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -461,7 +460,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="accessing-pubchem-through-pug-rest-part-ii">
-<h1>Accessing PubChem through PUG-REST: Part II<a class="headerlink" href="#accessing-pubchem-through-pug-rest-part-ii" title="Permalink to this heading">#</a></h1>
+<h1>Accessing PubChem through PUG-REST: Part II<a class="headerlink" href="#accessing-pubchem-through-pug-rest-part-ii" title="Permalink to this headline">#</a></h1>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<div class="sd-summary-down docutils">
@@ -491,7 +490,7 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 </div>
 </div>
 <section id="accessing-pubchem-data-using-a-chemical-name">
-<h2>1. Accessing PubChem data using a chemical name<a class="headerlink" href="#accessing-pubchem-data-using-a-chemical-name" title="Permalink to this heading">#</a></h2>
+<h2>1. Accessing PubChem data using a chemical name<a class="headerlink" href="#accessing-pubchem-data-using-a-chemical-name" title="Permalink to this headline">#</a></h2>
 <p>You can access PubChem data using a chemical name.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -561,7 +560,7 @@ IsomericSMILES  : CC(=O)OC1=CC=CC=C1C(=O)O
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;23681059&#39;, &#39;156391&#39;, &#39;6925666&#39;, &#39;56841568&#39;, &#39;77098502&#39;, &#39;9581&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;23681059&#39;, &#39;156391&#39;, &#39;6925666&#39;, &#39;56841568&#39;, &#39;9581&#39;, &#39;77098502&#39;]
 </pre></div>
 </div>
 </div>
@@ -582,19 +581,19 @@ IsomericSMILES  : CC(=O)OC1=CC=CC=C1C(=O)O
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CID 56841568 : C24H30ClNO4
 </pre></div>
 </div>
-<img alt="../_images/36e4c75367ecbb2ec6a21b2b78bcc67496596fe776c3c0c46c57eb7975839f4b.png" src="../_images/36e4c75367ecbb2ec6a21b2b78bcc67496596fe776c3c0c46c57eb7975839f4b.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CID 77098502 : C31H35ClNNaO4
-</pre></div>
-</div>
 <img alt="../_images/72793c29696013f027987259a64b8046adb68e4869b32f23e3082adc2b770aef.png" src="../_images/72793c29696013f027987259a64b8046adb68e4869b32f23e3082adc2b770aef.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CID 9581 : C10H16ClNO
+</pre></div>
+</div>
+<img alt="../_images/36e4c75367ecbb2ec6a21b2b78bcc67496596fe776c3c0c46c57eb7975839f4b.png" src="../_images/36e4c75367ecbb2ec6a21b2b78bcc67496596fe776c3c0c46c57eb7975839f4b.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CID 77098502 : C31H35ClNNaO4
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="getting-chemical-names-for-a-given-chemical-structure">
-<h2>2. Getting chemical names for a given chemical structure<a class="headerlink" href="#getting-chemical-names-for-a-given-chemical-structure" title="Permalink to this heading">#</a></h2>
+<h2>2. Getting chemical names for a given chemical structure<a class="headerlink" href="#getting-chemical-names-for-a-given-chemical-structure" title="Permalink to this headline">#</a></h2>
 <p>In the above example, the two CIDs from partial matching (CIDs 56841568 and CIDs 77098502) are the mixture of naproxen with other compounds.  Because they are from partial matching with the name “aleve”, we know their names contain “aleve”, but what are they called exactly?  We can figure this out by getting all synonyms for these compounds using PUG-REST.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -616,19 +615,10 @@ DTXSID80931146
 2-(6-Methoxynaphthalen-2-yl)propanoic acid--2-(methylamino)-1-phenylpropan-1-ol--hydrogen chloride (1/1/1)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#-- CID 77098502
-Aleve PM
-Naproxen sodium/DPH combination
-Diphenhydramine HCl / naproxen sodium
-BAY98-7111
-BAY 98-7111
-Naproxen Sodium and diphenhydramine combination
-Diphenhydramine hydrochloride and naproxen sodium
-S900006580
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#-- CID 9581
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#-- CID 9581
-PSEUDOEPHEDRINE HYDROCHLORIDE
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PSEUDOEPHEDRINE HYDROCHLORIDE
 Pseudoephedrine Hcl
 345-78-8
 Rhinalair
@@ -795,6 +785,18 @@ Benzenemethanol, alpha-((1S)-1-(methylamino)ethyl)-, hydrochloride (1:1), (alpha
 Pseudoephedrine hydrochloride, European Pharmacopoeia (EP) Reference Standard
 Pseudoephedrine hydrochloride, United States Pharmacopeia (USP) Reference Standard
 Pseudoephedrine hydrochloride, Pharmaceutical Secondary Standard; Certified Reference Material
+
+#-- CID 77098502
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Aleve PM
+Naproxen sodium/DPH combination
+Diphenhydramine HCl / naproxen sodium
+BAY98-7111
+BAY 98-7111
+Naproxen Sodium and diphenhydramine combination
+Diphenhydramine hydrochloride and naproxen sodium
+S900006580
 </pre></div>
 </div>
 </div>

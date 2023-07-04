@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Finding a Findable Dataset &#8212; IUPAC FAIR Chemistry Cookbook</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="PubChem PUG-REST API" href="pubchem-pug.html" />
     <link rel="prev" title="FAIR formating of (multi, hyper) spectral data" href="learn_spectra.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -471,7 +470,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="finding-a-findable-dataset">
-<h1>Finding a Findable Dataset<a class="headerlink" href="#finding-a-findable-dataset" title="Permalink to this heading">#</a></h1>
+<h1>Finding a Findable Dataset<a class="headerlink" href="#finding-a-findable-dataset" title="Permalink to this headline">#</a></h1>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<div class="sd-summary-down docutils">
@@ -505,7 +504,7 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 </ul>
 </div>
 </details><section id="scenario">
-<h2>Scenario<a class="headerlink" href="#scenario" title="Permalink to this heading">#</a></h2>
+<h2>Scenario<a class="headerlink" href="#scenario" title="Permalink to this headline">#</a></h2>
 <p>Our group has a set of thermophysical data on over 8000 chemical substances.  We want to integrate into this dataset another physical property dataset so that we can do an analysis of the correlations of the thermophysical data with the chosen physical property of the substances (that are common to both sets).</p>
 <p>Criteria for picking the physical property dataset: high quality, trusted, large, available with an open license, so I can publish the results and make the derived dataset open.</p>
 <ul class="simple">
@@ -514,7 +513,7 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 </ul>
 </section>
 <section id="step-1-searching-pubchem-for-datasets">
-<h2>Step 1 - Searching PubChem for datasets<a class="headerlink" href="#step-1-searching-pubchem-for-datasets" title="Permalink to this heading">#</a></h2>
+<h2>Step 1 - Searching PubChem for datasets<a class="headerlink" href="#step-1-searching-pubchem-for-datasets" title="Permalink to this headline">#</a></h2>
 <p>Pubchem houses a lot of data about chemical substances, compounds and bioassays.  Over time external organizations have worked with
 PubChem to include data, in one of a couple of ways:</p>
 <ul class="simple">
@@ -523,7 +522,7 @@ PubChem to include data, in one of a couple of ways:</p>
 </ul>
 <p>The data available is may not be structured and or clearly described, however if the source has a website with an API then you are likely to get better quality metadata from the linked site.</p>
 <section id="load-the-python-functions">
-<h3>1.1 - Load the Python functions<a class="headerlink" href="#load-the-python-functions" title="Permalink to this heading">#</a></h3>
+<h3>1.1 - Load the Python functions<a class="headerlink" href="#load-the-python-functions" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># as these are direct imports (they do not reference a Python package) they are built into Python</span>
@@ -535,7 +534,7 @@ PubChem to include data, in one of a couple of ways:</p>
 </div>
 </section>
 <section id="search-for-sources-that-have-curation-efforts">
-<h3>1.2 - Search for sources that have ‘curation efforts’<a class="headerlink" href="#search-for-sources-that-have-curation-efforts" title="Permalink to this heading">#</a></h3>
+<h3>1.2 - Search for sources that have ‘curation efforts’<a class="headerlink" href="#search-for-sources-that-have-curation-efforts" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This URL is the metadata about the data sources in PubChem</span>
@@ -938,12 +937,12 @@ PubChem to include data, in one of a couple of ways:</p>
 </section>
 </section>
 <section id="step-2-searching-fair-sharing-for-datasets">
-<h2>Step 2 - Searching FAIR Sharing for datasets<a class="headerlink" href="#step-2-searching-fair-sharing-for-datasets" title="Permalink to this heading">#</a></h2>
+<h2>Step 2 - Searching FAIR Sharing for datasets<a class="headerlink" href="#step-2-searching-fair-sharing-for-datasets" title="Permalink to this headline">#</a></h2>
 <p>FAIRSharing is a database of FAIR resources and per se a database of datasets, however you might find a repository here that
 has the kind of data you are looking for. The code below accesses the FAIR sharing API so search for ‘chemistry’ (or other term)
 related resources.</p>
 <section id="authentication-to-the-fairsharing-api">
-<h3>2.1 - Authentication to the FAIRSharing API<a class="headerlink" href="#authentication-to-the-fairsharing-api" title="Permalink to this heading">#</a></h3>
+<h3>2.1 - Authentication to the FAIRSharing API<a class="headerlink" href="#authentication-to-the-fairsharing-api" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># see https://fairsharing.org/API_doc for instructions on how to search the API</span>
@@ -974,7 +973,7 @@ related resources.</p>
 </div>
 </section>
 <section id="make-the-api-request">
-<h3>2.2 - Make the API request<a class="headerlink" href="#make-the-api-request" title="Permalink to this heading">#</a></h3>
+<h3>2.2 - Make the API request<a class="headerlink" href="#make-the-api-request" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># in order to authenticate when making an API request the &#39;jwt&#39; code above must</span>
@@ -1839,7 +1838,7 @@ related resources.</p>
 </div>
 </section>
 <section id="output-the-data-in-a-presentable-format">
-<h3>2.3 - Output the data in a presentable format<a class="headerlink" href="#output-the-data-in-a-presentable-format" title="Permalink to this heading">#</a></h3>
+<h3>2.3 - Output the data in a presentable format<a class="headerlink" href="#output-the-data-in-a-presentable-format" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># here we loop over the data that has been returned and print it out, one per line</span>

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Structured UV/Vis (meta)data for small molecule characterisation &#8212; IUPAC FAIR Chemistry Cookbook</title>
   
@@ -44,7 +44,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Using the OPSIN API in Python" href="opsin.html" />
     <link rel="prev" title="Accessing PubChem through PUG-REST: Part III" href="pubchem-pug-rest3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -477,7 +476,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="structured-uv-vis-meta-data-for-small-molecule-characterisation">
-<h1>Structured UV/Vis (meta)data for small molecule characterisation<a class="headerlink" href="#structured-uv-vis-meta-data-for-small-molecule-characterisation" title="Permalink to this heading">#</a></h1>
+<h1>Structured UV/Vis (meta)data for small molecule characterisation<a class="headerlink" href="#structured-uv-vis-meta-data-for-small-molecule-characterisation" title="Permalink to this headline">#</a></h1>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<div class="sd-summary-down docutils">
@@ -507,24 +506,24 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 </ul>
 </div>
 </details><section id="objectives">
-<h2>1. Objectives<a class="headerlink" href="#objectives" title="Permalink to this heading">#</a></h2>
+<h2>1. Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">#</a></h2>
 <p>To provide guidance on the minimum set of metadata required for publishing UV/Vis spectroscopic data as supplementary information to support compound characterisation using the Beer-Lambert Law. To apply the FAIR principles for data management to produce digital data objects that contain raw, spectral and metadata to enable current and future researchers in the reanalysis and visualisation of UV/Vis spectroscopic data.</p>
 </section>
 <section id="target-audience">
-<h2>2. Target audience<a class="headerlink" href="#target-audience" title="Permalink to this heading">#</a></h2>
+<h2>2. Target audience<a class="headerlink" href="#target-audience" title="Permalink to this headline">#</a></h2>
 <p>Researchers who routinely work with a user interface (spreadsheet) for preparation of supplementary material to support compound characterisation for publication: authors who aim to improve the FAIRness of their published supporting data.</p>
 <p>FAIR data management refers to the <a class="reference external" href="https://doi.org/10.1515/pac-2021-2009">IUPAC FAIRSpec standard</a>: IUPAC specifications for the findability, accessibility, interoperability and reusability of spectroscopic data in chemistry.</p>
 </section>
 <section id="structuring-the-meta-data">
-<h2>3. Structuring the (meta)data<a class="headerlink" href="#structuring-the-meta-data" title="Permalink to this heading">#</a></h2>
+<h2>3. Structuring the (meta)data<a class="headerlink" href="#structuring-the-meta-data" title="Permalink to this headline">#</a></h2>
 <section id="file-formats">
-<h3>3.1 File formats<a class="headerlink" href="#file-formats" title="Permalink to this heading">#</a></h3>
+<h3>3.1 File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">#</a></h3>
 <p>Textual metadata should (typically) be provided as a README.txt file.</p>
 <p>Instrument–specific file formats should not be used for storage of the raw spectroscopic dataset. If JCAMP-DX is a fully supported format of the spectrophotometer, then the sample level metadata available in the raw data file could be user–defined or mandatory. The metadata content also depends on mapping from the spectrophotometer native software to JCAMP-DX. Sample level metadata should be supplemented using the file structure defined in 3.2 below.</p>
 <p>The file formats recommended here are not exhaustive. For data reuse and preservation, all file formats must be non-proprietary, and associated software open source (maintained). Files should be uncompressed and unencrypted.</p>
 </section>
 <section id="file-hierarchy">
-<h3>3.2 File hierarchy<a class="headerlink" href="#file-hierarchy" title="Permalink to this heading">#</a></h3>
+<h3>3.2 File hierarchy<a class="headerlink" href="#file-hierarchy" title="Permalink to this headline">#</a></h3>
 <table border=1>
   <tr style="background-color:gray;">
     <td colspan='4'><strong>Raw Data</strong></td>
@@ -654,32 +653,32 @@ Markdown (.ipynb)
 </section>
 </section>
 <section id="data-reporting-using-jupyter-notebook-python">
-<h2>4. Data reporting using Jupyter Notebook (Python)<a class="headerlink" href="#data-reporting-using-jupyter-notebook-python" title="Permalink to this heading">#</a></h2>
+<h2>4. Data reporting using Jupyter Notebook (Python)<a class="headerlink" href="#data-reporting-using-jupyter-notebook-python" title="Permalink to this headline">#</a></h2>
 <p>Publication of UV/Vis spectroscopic data for small molecule characterisation typically requires a plot of the spectrum, and accompanying values for the wavelength of maximum absorbance (𝜆<sub>max</sub>) and associated molar extinction coefficient (ε). An exemplar procedure for FAIR data reporting using Jupyter Notebook is described below, suitable for a novice user without existing experience in the Python language.</p>
 <p>The UV/Vis reference data file ‘sample_data.jdx’ for salicylic acid in JCAMP-DX format is from the NIST Standard Reference Database available from the <a class="reference external" href="https://webbook.nist.gov/">NIST Chemistry WebBook</a>.</p>
 <section id="the-tools">
-<h3>4.1 The tools<a class="headerlink" href="#the-tools" title="Permalink to this heading">#</a></h3>
+<h3>4.1 The tools<a class="headerlink" href="#the-tools" title="Permalink to this headline">#</a></h3>
 </section>
 <section id="what-is-python">
-<h3>What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this heading">#</a></h3>
+<h3>What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this headline">#</a></h3>
 <p>From the official python website, <a class="reference external" href="http://Python.org">Python.org</a>:</p>
 <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. Python’s simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse. The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.</p>
 </section>
 <section id="what-is-jupyter-a-jupyter-notebook">
-<h3>What is Jupyter/a Jupyter Notebook?<a class="headerlink" href="#what-is-jupyter-a-jupyter-notebook" title="Permalink to this heading">#</a></h3>
+<h3>What is Jupyter/a Jupyter Notebook?<a class="headerlink" href="#what-is-jupyter-a-jupyter-notebook" title="Permalink to this headline">#</a></h3>
 <p>Jupyter (formerly IPython Notebook) is an open-source project that lets you easily combine markdown text and executable Python source code on one canvas called a notebook. They are both human readable documents containing the analysis description and the results (figures, tables, etc..) as well as executable documents which run the code to perform the data analysis.</p>
 </section>
 <section id="what-is-anaconda">
-<h3>What is Anaconda?<a class="headerlink" href="#what-is-anaconda" title="Permalink to this heading">#</a></h3>
+<h3>What is Anaconda?<a class="headerlink" href="#what-is-anaconda" title="Permalink to this headline">#</a></h3>
 <p>Anaconda can be thought of as a one stop shop for all things Python and data science. It’s almost an umbrella; by downloading Anaconda you also get Python, Jupyter notebooks and a whole host of other useful programmes. It is also a package manager and virtual environment manager.</p>
 </section>
 <section id="installing-the-tools">
-<h3>Installing the tools<a class="headerlink" href="#installing-the-tools" title="Permalink to this heading">#</a></h3>
+<h3>Installing the tools<a class="headerlink" href="#installing-the-tools" title="Permalink to this headline">#</a></h3>
 <p>The easiest way to install Python is through the package and virtual environment manager Anaconda. Anaconda is free and open source and the Individual Edition can be installed from <a class="reference external" href="https://www.anaconda.com/">https://www.anaconda.com/</a>.</p>
 <p>Once Anaconda is installed you can create a virtual environment, load Jupyter into the environment and run this notebook.</p>
 </section>
 <section id="running-the-notebook-on-your-computer">
-<h3>Running the notebook (on your computer)<a class="headerlink" href="#running-the-notebook-on-your-computer" title="Permalink to this heading">#</a></h3>
+<h3>Running the notebook (on your computer)<a class="headerlink" href="#running-the-notebook-on-your-computer" title="Permalink to this headline">#</a></h3>
 <ol class="arabic simple">
 <li><p>Make sure Anaconda is installed on your computer</p></li>
 <li><p>Use the Anaconda navigator (or the command line) to create a virutal environment</p></li>
@@ -692,7 +691,7 @@ Markdown (.ipynb)
 </ol>
 </section>
 <section id="exemplar-code-for-data-reporting">
-<h3>4.2 Exemplar code for data reporting<a class="headerlink" href="#exemplar-code-for-data-reporting" title="Permalink to this heading">#</a></h3>
+<h3>4.2 Exemplar code for data reporting<a class="headerlink" href="#exemplar-code-for-data-reporting" title="Permalink to this headline">#</a></h3>
 <p>First the packages we need are imported into the Jupyter notebook</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -876,7 +875,7 @@ with descriptive and informative names) that will hold the data associated with 
 </section>
 </section>
 <section id="glossary-of-python-terms">
-<h2>5. Glossary of Python terms<a class="headerlink" href="#glossary-of-python-terms" title="Permalink to this heading">#</a></h2>
+<h2>5. Glossary of Python terms<a class="headerlink" href="#glossary-of-python-terms" title="Permalink to this headline">#</a></h2>
 <p><b>Package</b></p>
 <p>When developing a Python script, it’s often necessary to use functionality that is not included in the Python standard library. One way to access this additional functionality is by importing Python packages into your script. These packages, also known as modules, provide pre-built functionality and code that can be easily integrated into your script, saving you the time and effort of having to write everything from scratch. They can include functions, classes, or other objects that are ready to use or extend, and are written by other developers to solve specific problems or tasks. In addition, importing packages can also help to keep your code organized and maintainable, by breaking it up into reusable and functional blocks. In summary, we import packages into scripts to leverage pre-built functionality and take advantage of the expertise of the Python community, allowing us to focus on the specific problem we are trying to solve.</p>
 <p><b>Comment</b></p>
