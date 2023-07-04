@@ -83,7 +83,7 @@ import .csv, .tsv and other files and not let you choose what the encoding is.  
 system there may be some selections that won't work on your computer.
 
 Figure 1
-[fig1a](../images/spreadsheet_fig1a.jpg) [fig2b](../images/spreadsheet_fig1b.jpg)
+![fig1a](../images/spreadsheet_fig1a.jpg) ![fig2b](../images/spreadsheet_fig1b.jpg)
 Caption: The Excel import dialog (1a) and the options for 'File origin' (1b)
 
 Using the open file dialog is important if your text file contains unicode (e.g., UTF-8).  If you double click on a .csv,
@@ -99,7 +99,7 @@ This can result in extra blank lines begin added by Excel to the imported file w
 CR character, and a 'line-feed' LF character is at the end of line.
 
 Figure 2
-[fig2a](../images/spreadsheet_fig2a.jpg) [fig2b](../images/spreadsheet_fig2b.jpg)
+![fig2a](../images/spreadsheet_fig2a.jpg) ![fig2b](../images/spreadsheet_fig2b.jpg)
 Caption: Importing a unicode (UTF-8) '.csv' file into Excel directly (2a), and using the Excel file oping dialog (2b)
 
 ### 2.3 Data types in Excel
@@ -119,7 +119,7 @@ As an example, the value one thousand, two hundred and thirty-four point fifty-s
 - In Latin America and continental Europe as: 1.234,56
 
 Figure 3
-[fig3a](../images/spreadsheet_fig3a.jpg) [fig3b](../images/spreadsheet_fig3b.jpg)
+![fig3a](../images/spreadsheet_fig3a.jpg) ![fig3b](../images/spreadsheet_fig3b.jpg)
 Caption: Data types for columns in Excel (3a) and advanced options for interpretting numeric values (3b)
 
 
