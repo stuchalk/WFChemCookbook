@@ -518,8 +518,8 @@ encoding formats, but in order to import them correctly you should use the .txt 
 import .csv, .tsv and other files and not let you choose what the encoding is.  Depending on your computers’ operating
 system there may be some selections that won’t work on your computer.</p>
 <p>Figure 1</p>
-<a class="reference internal image-reference" href="../_images/spreadsheet_fig1a.jpg"><img alt="Excel import dialog" class="align-left" src="../_images/spreadsheet_fig1a.jpg" style="width: 50%;" /></a>
-<a class="reference internal image-reference" href="../_images/spreadsheet_fig1b.jpg"><img alt="Excel options for file origin" class="align-right" src="../_images/spreadsheet_fig1b.jpg" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="../_images/spreadsheet_fig1a.jpg"><img alt="Excel import dialog" class="align-left" src="../_images/spreadsheet_fig1a.jpg" style="width: 40%;" /></a>
+<a class="reference internal image-reference" href="../_images/spreadsheet_fig1b.jpg"><img alt="Excel options for file origin" class="align-right" src="../_images/spreadsheet_fig1b.jpg" style="width: 40%;" /></a>
 <p>Caption: The Excel import dialog (1a) and the options for ‘File origin’ (1b)</p>
 <p>Using the open file dialog is important if your text file contains unicode (e.g., UTF-8).  If you double click on a .csv,
 .tsv, or other file with an extension that Excel automatically recognizes, the file will be opened without giving you
@@ -549,11 +549,13 @@ chemical data this is particularly important when importing CAS Registry Numbers
 misinterpreted as dates if the column data type is left as ‘General’.  In this situation, change the data format to
 ‘Text’ and the CASRN’s will all be imported correctly (see Figure 5a).  You can also force this in the .csv file by
 addin quotes around the CASRN and adding a ‘=’before the first quote (Figure 5b).</p>
-<div class="highlight-{How notranslate"><div class="highlight"><pre><span></span>If you want to find out go to the follow URL, a [SPARQL](https://query.wikidata.org/#%23All%20CAS%20registry%20numbers%20in%20Wikidata%0ASELECT%20DISTINCT%20%3Fcompound%20%3FcompoundLabel%20%3Fcas%0AWHERE%0A%7B%0A%20%20%3Fcompound%20wdt%3AP231%20%3Fcas%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D%0ALIMIT%201000) 
-search on Wikidata, that retrieves the first 1000 compounds with a CASRN.  Click the &#39;Run&#39; button on the left of the 
-page then export the data as .csv from the &#39;Download&#39; menu on the right.  Open the file in Excel and see how many of 
-the 1000 compounds are dates.
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to find out how prevalent CASRN’s being misinterpreted as dates, use this
+<a class="reference external" href="https://query.wikidata.org/#%23All%20CAS%20registry%20numbers%20in%20Wikidata%0ASELECT%20DISTINCT%20%3Fcompound%20%3FcompoundLabel%20%3Fcas%0AWHERE%0A%7B%0A%20%20%3Fcompound%20wdt%3AP231%20%3Fcas%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D%0ALIMIT%201000">link</a>
+to run a SPARQL query (search) on Wikidata, that retrieves the first 1000 compounds with a CASRN.  Click the ‘Run’
+button on the left of the page then export the data as .csv from the ‘Download’ menu on the right.  Open the file
+in Excel and see how many of the 1000 compounds have CASRN’s formatted as dates.</p>
 </div>
 <p>Figure 4b shows the dialog when you are importing a file in Excel and in Step 3 you click on the Advanced button.<br />
 If you receive data from collaborators in other countries, you may need to change the way Excel identifies numeric

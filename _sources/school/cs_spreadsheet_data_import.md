@@ -85,12 +85,12 @@ system there may be some selections that won't work on your computer.
 Figure 1
 ```{image} ../images/spreadsheet_fig1a.jpg
 :alt: Excel import dialog
-:width: 50%
+:width: 40%
 :align: left
 ```
 ```{image} ../images/spreadsheet_fig1b.jpg
 :alt: Excel options for file origin
-:width: 50%
+:width: 40%
 :align: right
 ```
 Caption: The Excel import dialog (1a) and the options for 'File origin' (1b)
@@ -124,11 +124,12 @@ misinterpreted as dates if the column data type is left as 'General'.  In this s
 'Text' and the CASRN's will all be imported correctly (see Figure 5a).  You can also force this in the .csv file by
 addin quotes around the CASRN and adding a '='before the first quote (Figure 5b).
 
-```{How prevelant are CASRN's being converted to dates in Excel?}
-If you want to find out go to the follow URL, a [SPARQL](https://query.wikidata.org/#%23All%20CAS%20registry%20numbers%20in%20Wikidata%0ASELECT%20DISTINCT%20%3Fcompound%20%3FcompoundLabel%20%3Fcas%0AWHERE%0A%7B%0A%20%20%3Fcompound%20wdt%3AP231%20%3Fcas%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D%0ALIMIT%201000) 
-search on Wikidata, that retrieves the first 1000 compounds with a CASRN.  Click the 'Run' button on the left of the 
-page then export the data as .csv from the 'Download' menu on the right.  Open the file in Excel and see how many of 
-the 1000 compounds are dates.
+```{Note}
+If you want to find out how prevalent CASRN's being misinterpreted as dates, use this 
+[link](https://query.wikidata.org/#%23All%20CAS%20registry%20numbers%20in%20Wikidata%0ASELECT%20DISTINCT%20%3Fcompound%20%3FcompoundLabel%20%3Fcas%0AWHERE%0A%7B%0A%20%20%3Fcompound%20wdt%3AP231%20%3Fcas%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D%0ALIMIT%201000) 
+to run a SPARQL query (search) on Wikidata, that retrieves the first 1000 compounds with a CASRN.  Click the 'Run' 
+button on the left of the page then export the data as .csv from the 'Download' menu on the right.  Open the file
+in Excel and see how many of the 1000 compounds have CASRN's formatted as dates.
 ```
 
 Figure 4b shows the dialog when you are importing a file in Excel and in Step 3 you click on the Advanced button.  
