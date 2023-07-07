@@ -82,25 +82,14 @@ encoding formats, but in order to import them correctly you should use the .txt 
 import .csv, .tsv and other files and not let you choose what the encoding is.  Depending on your computers' operating
 system there may be some selections that won't work on your computer.
 
-<table>
-<tbody><tr><td>
-```{figure} ../images/spreadsheet_fig1a.jpg
-:alt: Excel import dialog
-:width: 50%
-:align: left
+```{figure} ../images/spreadsheet_fig1.jpg
 ---
-Figure 1a - The Excel import dialog
-```
-</td><td>
-```{image} ../images/spreadsheet_fig1b.jpg
-:alt: Excel options for file origin
-:width: 50%
-:align: right
+alt: Excel import dialog and file origin options
+width: 80%
+align: center
 ---
-Figure 1b - The options for 'File origin'
+Figure 1a - The Excel import dialog the options for 'File origin'
 ```
-</td></tr></tbody>
-</table>
 
 Using the open file dialog is important if your text file contains unicode (e.g., UTF-8).  If you double click on a .csv,
 .tsv, or other file with an extension that Excel automatically recognizes, the file will be opened without giving you 
