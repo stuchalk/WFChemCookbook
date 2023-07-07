@@ -62,7 +62,7 @@ format the file is, and/or which type of software can open it.  Some common text
   ability of XML documents to be validated against an [XML Schema](https://en.wikipedia.org/wiki/XML_schema), a set of 
   XML based rules that dictate what can be stored in an XML file that is an instance of a specific XML schema.
 - '.jdx' : a JCAMP-DX text file that stores instrument data according to a specific format (see...). This is one of many
-  chemical data file formats, which will be covered [here](add...)
+  chemical data file formats, many of which are discussed [here](https://en.wikipedia.org/wiki/Chemical_file_format).
 
 Files with the extension .csv  or .tsv are examples of 'delimited' text files.  Delimiting simply means separating data
 into chunks (e.g., columns in a table) in a text string or line of text in a file, using a specific character.  For a
@@ -83,7 +83,16 @@ import .csv, .tsv and other files and not let you choose what the encoding is.  
 system there may be some selections that won't work on your computer.
 
 Figure 1
-![fig1a](../images/spreadsheet_fig1a.jpg) ![fig2b](../images/spreadsheet_fig1b.jpg)
+```{image} ../images/spreadsheet_fig1a.jpg
+:alt: Excel import dialog
+:width: 50%
+:align: left
+```
+```{image} ../images/spreadsheet_fig1b.jpg
+:alt: Excel options for file origin
+:width: 50%
+:align: right
+```
 Caption: The Excel import dialog (1a) and the options for 'File origin' (1b)
 
 Using the open file dialog is important if your text file contains unicode (e.g., UTF-8).  If you double click on a .csv,
@@ -93,24 +102,36 @@ imported file (see Figure 2a).  However, if you change the extension of such a f
 Excel you will be able to use the dialog in Figure 1a to choose the correct encoding and make sure that the text shows
 correctly in Excel (see Figure 2b).
 
+Figure 2
+![fig2a](../images/spreadsheet_fig2a.jpg) ![fig2b](../images/spreadsheet_fig2b.jpg)
+Caption: Importing a unicode (UTF-8) '.csv' file into Excel directly (2a), and using the Excel file oping dialog (2b)
+
 ### 2.2 End of line characters
 Although less of an issue these days, you may want to check the end-of-line encoding (Figure 3) that is used in the file.
 This can result in extra blank lines begin added by Excel to the imported file when the file has both a 'carriage return'
 CR character, and a 'line-feed' LF character is at the end of line.
 
-Figure 2
-![fig2a](../images/spreadsheet_fig2a.jpg) ![fig2b](../images/spreadsheet_fig2b.jpg)
-Caption: Importing a unicode (UTF-8) '.csv' file into Excel directly (2a), and using the Excel file oping dialog (2b)
+Figure 3
+![fig3](../images/spreadsheet_fig3.jpg)
+Caption: Different end-of-line character options fro a text file. 
 
 ### 2.3 Data types in Excel
 During the import of a text file, via the open dialog, you are presented with other choices as you work through importing 
-the file.  On the last dialog you get to choose the format of each column of data in the file.  Figure 3a shows the 
+the file.  On the last dialog you get to choose the format of each column of data in the file.  Figure 4a shows the 
 choices available, and you can click on the header of each column (or multiple columns) to assign a data type.  For
 chemical data this is particularly important when importing CAS Registry Numbers (CASRN's), as some CASRN's can be
 misinterpreted as dates if the column data type is left as 'General'.  In this situation, change the data format to 
-'Text' and CASRN's will all be imported correctly.
+'Text' and the CASRN's will all be imported correctly (see Figure 5a).  You can also force this in the .csv file by
+addin quotes around the CASRN and adding a '='before the first quote (Figure 5b).
 
-Figure 3b shows the dialog when you are importing a file in Excel and in Step 3 you click on the Advanced button.  
+```{How prevelant are CASRN's being converted to dates in Excel?}
+If you want to find out go to the follow URL, a [SPARQL](https://query.wikidata.org/#%23All%20CAS%20registry%20numbers%20in%20Wikidata%0ASELECT%20DISTINCT%20%3Fcompound%20%3FcompoundLabel%20%3Fcas%0AWHERE%0A%7B%0A%20%20%3Fcompound%20wdt%3AP231%20%3Fcas%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D%0ALIMIT%201000) 
+search on Wikidata, that retrieves the first 1000 compounds with a CASRN.  Click the 'Run' button on the left of the 
+page then export the data as .csv from the 'Download' menu on the right.  Open the file in Excel and see how many of 
+the 1000 compounds are dates.
+```
+
+Figure 4b shows the dialog when you are importing a file in Excel and in Step 3 you click on the Advanced button.  
 If you receive data from collaborators in other countries, you may need to change the way Excel identifies numeric 
 values, as there are differences between countries on the use of the full stop/period '.' and the comma as 
 [formatting characters](https://en.wikipedia.org/wiki/Decimal_separator).
@@ -118,9 +139,14 @@ As an example, the value one thousand, two hundred and thirty-four point fifty-s
 - In English-speaking countries and Asia as: 1,234.56
 - In Latin America and continental Europe as: 1.234,56
 
-Figure 3
-![fig3a](../images/spreadsheet_fig3a.jpg) ![fig3b](../images/spreadsheet_fig3b.jpg)
-Caption: Data types for columns in Excel (3a) and advanced options for interpretting numeric values (3b)
+Figure 4
+![fig4a](../images/spreadsheet_fig4a.jpg) ![fig4b](../images/spreadsheet_fig4b.jpg)
+Caption: Data types for columns in Excel (4a) and advanced options for interpretting numeric values (4b)
+
+
+Figure 5
+![fig5a](../images/spreadsheet_fig5a.jpg) ![fig5b](../images/spreadsheet_fig5b.jpg)
+Caption: Data types for columns in Excel (4a) and advanced options for interpretting numeric values (4b)
 
 
 ## 3 Importing into Google Sheets
