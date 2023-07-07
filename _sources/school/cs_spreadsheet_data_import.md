@@ -104,9 +104,8 @@ alt: importing a unicode (UTF-8) '.csv' file
 width: 100%
 align: center
 ---
-Importing a unicode (UTF-8) '.csv' file into Excel directly (left), and using the Excel file oping dialog (right)
+Importing a unicode (UTF-8) '.csv' file into Excel directly and using the Excel file open dialog
 ```
-
 
 ### 2.2 End of line characters
 Although less of an issue these days, you may want to check the end-of-line encoding (Figure 3) that is used in the file.
@@ -121,7 +120,6 @@ align: center
 ---
 Different end-of-line character options for a text file
 ```
-
 
 ### 2.3 Data types in Excel
 During the import of a text file, via the open dialog, you are presented with other choices as you work through importing 
@@ -150,11 +148,11 @@ As an example, the value one thousand, two hundred and thirty-four point fifty-s
 
 ```{figure} ../images/spreadsheet_fig4.jpg
 ---
-alt: data types for columns in Excel and options for interpretting numeric values
+alt: data types for columns in Excel (left) and options for interpretting numeric values (right)
 width: 100%
 align: center
 ---
-Data types for columns in Excel (left) and advanced options for interpretting numeric values (right)
+Data types for columns in Excel and advanced options for interpretting numeric values
 ```
 
 ```{figure} ../images/spreadsheet_fig5.jpg
