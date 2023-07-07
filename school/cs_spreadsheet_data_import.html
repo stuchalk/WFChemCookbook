@@ -518,9 +518,9 @@ encoding formats, but in order to import them correctly you should use the .txt 
 import .csv, .tsv and other files and not let you choose what the encoding is.  Depending on your computers’ operating
 system there may be some selections that won’t work on your computer.</p>
 <figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="../_images/spreadsheet_fig1.jpg"><img alt="Excel import dialog and file origin options" src="../_images/spreadsheet_fig1.jpg" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/spreadsheet_fig1.jpg"><img alt="Excel import dialog and file origin options" src="../_images/spreadsheet_fig1.jpg" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Figure 1a - The Excel import dialog the options for ‘File origin’</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The Excel import dialog the options for ‘File origin’</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Using the open file dialog is important if your text file contains unicode (e.g., UTF-8).  If you double click on a .csv,
@@ -529,18 +529,24 @@ the option to choose UTF-8 as the encoding format.  This results in ‘weird cha
 imported file (see Figure 2a).  However, if you change the extension of such a file to ‘.txt’ and then open it from within
 Excel you will be able to use the dialog in Figure 1a to choose the correct encoding and make sure that the text shows
 correctly in Excel (see Figure 2b).</p>
-<p>Figure 2
-<img alt="fig2a" src="../_images/spreadsheet_fig2a.jpg" /> <img alt="fig2b" src="../_images/spreadsheet_fig2b.jpg" />
-Caption: Importing a unicode (UTF-8) ‘.csv’ file into Excel directly (2a), and using the Excel file oping dialog (2b)</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/spreadsheet_fig2.jpg"><img alt="importing a unicode (UTF-8) '.csv' file" src="../_images/spreadsheet_fig2.jpg" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Importing a unicode (UTF-8) ‘.csv’ file into Excel directly (left), and using the Excel file oping dialog (right)</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="end-of-line-characters">
 <h3>2.2 End of line characters<a class="headerlink" href="#end-of-line-characters" title="Permalink to this headline">#</a></h3>
 <p>Although less of an issue these days, you may want to check the end-of-line encoding (Figure 3) that is used in the file.
 This can result in extra blank lines begin added by Excel to the imported file when the file has both a ‘carriage return’
 CR character, and a ‘line-feed’ LF character is at the end of line.</p>
-<p>Figure 3
-<img alt="fig3" src="../_images/spreadsheet_fig3.jpg" />
-Caption: Different end-of-line character options fro a text file.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/spreadsheet_fig3.jpg"><img alt="end-of-line character options for a text file" src="../_images/spreadsheet_fig3.jpg" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Different end-of-line character options for a text file</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="data-types-in-excel">
 <h3>2.3 Data types in Excel<a class="headerlink" href="#data-types-in-excel" title="Permalink to this headline">#</a></h3>
@@ -568,12 +574,18 @@ As an example, the value one thousand, two hundred and thirty-four point fifty-s
 <li><p>In English-speaking countries and Asia as: 1,234.56</p></li>
 <li><p>In Latin America and continental Europe as: 1.234,56</p></li>
 </ul>
-<p>Figure 4
-<img alt="fig4a" src="../_images/spreadsheet_fig4a.jpg" /> <img alt="fig4b" src="../_images/spreadsheet_fig4b.jpg" />
-Caption: Data types for columns in Excel (4a) and advanced options for interpretting numeric values (4b)</p>
-<p>Figure 5
-<img alt="fig5a" src="../_images/spreadsheet_fig5a.jpg" /> <img alt="fig5b" src="../_images/spreadsheet_fig5b.jpg" />
-Caption: Data types for columns in Excel (4a) and advanced options for interpretting numeric values (4b)</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/spreadsheet_fig4.jpg"><img alt="data types for columns in Excel and options for interpretting numeric values" src="../_images/spreadsheet_fig4.jpg" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Data types for columns in Excel (left) and advanced options for interpretting numeric values (right)</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../_images/spreadsheet_fig5.jpg"><img alt="reformatting that occurs when importing CAS Registry Numbers into Excel" src="../_images/spreadsheet_fig5.jpg" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Reformatting that occurs when importing CAS Registry Numbers into Excel</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 <section id="importing-into-google-sheets">
