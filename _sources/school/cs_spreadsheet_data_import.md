@@ -112,8 +112,8 @@ the file.  On the last dialog you get to choose the format of each column of dat
 choices available, and you can click on the header of each column (or multiple columns) to assign a data type.  For
 chemical data this is particularly important when importing CAS Registry Numbers (CASRN's), as some CASRN's can be
 misinterpreted as dates if the column data type is left as 'General'.  In this situation, change the data format to 
-'Text' and the CASRN's will all be imported correctly (see Figure 5a).  You can also force this in the .csv file by
-addin quotes around the CASRN and adding a '='before the first quote (Figure 5b).
+'Text' and the CASRN's will all be imported correctly (see Figure 4a).  You can also force this in the .csv file by
+addin quotes around the CASRN and adding a '='before the first quote (Figure 4b).
 
 Figure 4
 ![fig4](../images/spreadsheet_fig4.jpg)
@@ -127,10 +127,11 @@ button on the left of the page then export the data as .csv from the 'Download' 
 in Excel and see how many of the 1000 compounds have CASRN's formatted as dates.
 ```
 
-Figure 5b shows the dialog when you are importing a file in Excel and in Step 3 you click on the Advanced button.  
-If you receive data from collaborators in other countries, you may need to change the way Excel identifies numeric 
-values, as there are differences between countries on the use of the full stop/period '.' and the comma as 
+Figure 5b shows the dialog when you are importing a file in Excel and in Step 3 you click on the Advanced button. If you
+receive data from collaborators in other countries, you may need to change the way Excel identifies numeric values, as 
+there are differences between countries on the use of the full stop/period '.' and the comma as 
 [formatting characters](https://en.wikipedia.org/wiki/Decimal_separator).
+
 As an example, the value one thousand, two hundred and thirty-four point fifty-six is represented:
 - In English-speaking countries and Asia as: 1,234.56
 - In Latin America and continental Europe as: 1.234,56
