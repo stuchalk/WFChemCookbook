@@ -82,14 +82,9 @@ encoding formats, but in order to import them correctly you should use the .txt 
 import .csv, .tsv and other files and not let you choose what the encoding is.  Depending on your computers' operating
 system there may be some selections that won't work on your computer.
 
-```{figure} ../images/spreadsheet_fig1.jpg
----
-alt: Excel import dialog and file origin options
-width: 100%
-align: center
----
-The Excel import dialog the options for 'File origin'
-```
+Figure 1
+![fig1](../images/spreadsheet_fig1.jpg)
+Caption: The Excel import dialog (a) and the options for 'File origin' (b)
 
 Using the open file dialog is important if your text file contains unicode (e.g., UTF-8).  If you double click on a .csv,
 .tsv, or other file with an extension that Excel automatically recognizes, the file will be opened without giving you 
@@ -98,28 +93,18 @@ imported file (see Figure 2a).  However, if you change the extension of such a f
 Excel you will be able to use the dialog in Figure 1a to choose the correct encoding and make sure that the text shows
 correctly in Excel (see Figure 2b).
 
-```{figure} ../images/spreadsheet_fig2.jpg
----
-alt: importing a unicode (UTF-8) '.csv' file
-width: 100%
-align: center
----
-Importing a unicode (UTF-8) '.csv' file into Excel directly and using the Excel file open dialog
-```
+Figure 2
+![fig2](../images/spreadsheet_fig2.jpg)
+Caption: Importing a unicode (UTF-8) '.csv' file into Excel directly (a), and using the Excel file oping dialog (b)
 
 ### 2.2 End of line characters
 Although less of an issue these days, you may want to check the end-of-line encoding (Figure 3) that is used in the file.
 This can result in extra blank lines begin added by Excel to the imported file when the file has both a 'carriage return'
 CR character, and a 'line-feed' LF character is at the end of line.
 
-```{figure} ../images/spreadsheet_fig3.jpg
----
-alt: end-of-line character options for a text file
-width: 80%
-align: center
----
-Different end-of-line character options for a text file
-```
+Figure 3
+![fig3](../images/spreadsheet_fig3.jpg)
+Caption: Different end-of-line character options fro a text file. 
 
 ### 2.3 Data types in Excel
 During the import of a text file, via the open dialog, you are presented with other choices as you work through importing 
@@ -130,6 +115,10 @@ misinterpreted as dates if the column data type is left as 'General'.  In this s
 'Text' and the CASRN's will all be imported correctly (see Figure 5a).  You can also force this in the .csv file by
 addin quotes around the CASRN and adding a '='before the first quote (Figure 5b).
 
+Figure 4
+![fig4](../images/spreadsheet_fig4.jpg)
+Caption: CASRN;s in  (4a) and advanced options for interpretting numeric values (4b)
+
 ```{Note}
 If you want to find out how prevalent CASRN's being misinterpreted as dates, use this 
 [link](https://query.wikidata.org/#%23All%20CAS%20registry%20numbers%20in%20Wikidata%0ASELECT%20DISTINCT%20%3Fcompound%20%3FcompoundLabel%20%3Fcas%0AWHERE%0A%7B%0A%20%20%3Fcompound%20wdt%3AP231%20%3Fcas%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D%0ALIMIT%201000) 
@@ -138,7 +127,7 @@ button on the left of the page then export the data as .csv from the 'Download' 
 in Excel and see how many of the 1000 compounds have CASRN's formatted as dates.
 ```
 
-Figure 4b shows the dialog when you are importing a file in Excel and in Step 3 you click on the Advanced button.  
+Figure 5b shows the dialog when you are importing a file in Excel and in Step 3 you click on the Advanced button.  
 If you receive data from collaborators in other countries, you may need to change the way Excel identifies numeric 
 values, as there are differences between countries on the use of the full stop/period '.' and the comma as 
 [formatting characters](https://en.wikipedia.org/wiki/Decimal_separator).
@@ -146,23 +135,10 @@ As an example, the value one thousand, two hundred and thirty-four point fifty-s
 - In English-speaking countries and Asia as: 1,234.56
 - In Latin America and continental Europe as: 1.234,56
 
-```{figure} ../images/spreadsheet_fig4.jpg
----
-alt: data types for columns in Excel (left) and options for interpretting numeric values (right)
-width: 100%
-align: center
----
-Data types for columns in Excel and advanced options for interpretting numeric values
-```
+Figure 5
+![fig5](../images/spreadsheet_fig5.jpg)
+Caption: Data types for columns in Excel (a) and advanced options for interpretting numeric values (b)
 
-```{figure} ../images/spreadsheet_fig5.jpg
----
-alt: reformatting that occurs when importing CAS Registry Numbers into Excel
-width: 100%
-align: center
----
-Reformatting that occurs when importing CAS Registry Numbers into Excel
-```
 
 ## 3 Importing into Google Sheets
 In general Google Sheets is less susceptible to these issues, however if you are doing research at any level make sure
