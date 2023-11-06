@@ -147,18 +147,11 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    Using the Cookbook
-                </a>
-            </li>
-        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="about.html">About this Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iupacfair.html">IUPAC and FAIR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback.html">Help Improve the FAIR Chemistry Cookbook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">The FAIR Chemistry Cookbook</span></p>
 <ul class="nav bd-sidenav">
@@ -167,8 +160,21 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="techniques/PrepChemicalDataforSharing.html">Preparing Chemical Data for FAIR Sharing - A Minimalist Approach</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="utensils.html">Utensils to Use</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ingredients.html">Finding Ingredients</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="utensils.html">Utensils to Use</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tools/opsin.html">OPSIN: Open Parser for Systematic IUPAC Nomenclature</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ingredients.html">Finding Ingredients</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ingredients/commonchem.html">Repository: Common Chemistry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingredients/figshare.html">Repository: figshare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingredients/pubchem.html">Data Repository: PubChem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingredients/pubchem-pug.html">PubChem PUG-REST API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingredients/pubchem-pug-rest1.html">Accessing PubChem through PUG-REST - Part I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingredients/pubchem-pug-rest2.html">Accessing PubChem through PUG-REST: Part II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingredients/pubchem-pug-rest3.html">Accessing PubChem through PUG-REST: Part III</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingredients/zenodo.html">Repository: Zenodo</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="recipes.html">Data Recipes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="school.html">Culinary School</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plating.html">Data Plating</a></li>
@@ -379,13 +385,6 @@ By IUPAC WorldFAIR Chemistry D3.2 Project
   
   <div class="footer-item">
     
-  <p class="copyright">
-    
-      © Copyright 2022.
-      <br/>
-    
-  </p>
-
   </div>
   
   <div class="footer-item">
@@ -396,8 +395,8 @@ By IUPAC WorldFAIR Chemistry D3.2 Project
     
 <div class="extra_footer">
   <div>
-WorldFAIR “Global cooperation on FAIR data policy and practice” is funded by the EC HORIZON-WIDERA-2021-ERA-01-41<br/>
-Coordination and Support Action under Grant Agreement No. 101058393.
+<em>WorldFAIR “Global cooperation on FAIR data policy and practice” is funded by the EC HORIZON-WIDERA-2021-ERA-01-41<br/>
+Coordination and Support Action under Grant Agreement No. 101058393.</em>
 </div>
 
 </div>
