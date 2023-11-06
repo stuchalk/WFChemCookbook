@@ -168,17 +168,28 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ingredients.html">Finding Ingredients</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ingredients/commonchem.html">Repository: Common Chemistry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ingredients/figshare.html">Repository: figshare</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ingredients/pubchem.html">Data Repository: PubChem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ingredients/pubchem-pug.html">PubChem PUG-REST API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ingredients/pubchem-pug-rest1.html">Accessing PubChem through PUG-REST - Part I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ingredients/pubchem-pug-rest2.html">Accessing PubChem through PUG-REST: Part II</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ingredients/pubchem-pug-rest3.html">Accessing PubChem through PUG-REST: Part III</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ingredients/zenodo.html">Repository: Zenodo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../recipes.html">Data Recipes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../school.html">Culinary School</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../plating.html">Data Plating</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../recipes.html">Data Recipes</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../recipes/computing_inchis.html">Computing InChIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../recipes/dataset_search.html">Finding a Findable Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../recipes/goldbook.html">Accessing the IUPAC Gold Book API in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../recipes/iupac_pka_data.html">Reuse of Curated Chemical Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../recipes/opsin.html">Using the OPSIN API in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../recipes/uvvis_metadata.html">Structured UV/Vis (meta)data for small molecule characterisation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../school/cs_googlesheets_citation_data.html">Importing JSON Citation Data from an API into Google Sheets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../school/cs_spreadsheet_data_import.html">Importing Chemical Data into a Spreadsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../plating.html">Data Plating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standards/learn_spectra.html">FAIR formating of (multi, hyper) spectral data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standards/uniqueidentifiers.html">How To: Unique Identifiers for Chemical Data</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="nav bd-sidenav">
@@ -381,27 +392,36 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="opsin-open-parser-for-systematic-iupac-nomenclature">
 <h1>OPSIN: Open Parser for Systematic IUPAC Nomenclature<a class="headerlink" href="#opsin-open-parser-for-systematic-iupac-nomenclature" title="Permalink to this headline">#</a></h1>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p>Function: IUPAC chemical name to chemical identifier converter</p></li>
-<li><p>Format: Website for form based queries and URL base API</p></li>
-<li><p>Input: IUPAC systematic chemical name</p></li>
-<li><p>Outputs: Standard InChI string, Standard InChIKey, SMILES, Chemical Markup Langauge (CML) XML, image (.png or .svg)</p></li>
-<li><p>Usage: <a class="reference external" href="https://opsin.ch.cam.ac.uk/instructions.html">Instructions</a></p></li>
-<li><p>Publication: <a class="reference external" href="https://pubs.acs.org/articlesonrequest/AOR-PcYgSy87ettZWfqyvHmN">https://doi.org/10.1021/ci100384d</a></p></li>
-<li><p>Website: <a class="reference external" href="https://opsin.ch.cam.ac.uk">https://opsin.ch.cam.ac.uk</a></p></li>
-<li><p>Application Programming Interface (API): <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/">https://opsin.ch.cam.ac.uk/opsin/</a></p>
+<li><p class="sd-card-text">Function: IUPAC chemical name to chemical identifier converter</p></li>
+<li><p class="sd-card-text">Format: Website for form based queries and URL base API</p></li>
+<li><p class="sd-card-text">Input: IUPAC systematic chemical name</p></li>
+<li><p class="sd-card-text">Outputs: Standard InChI string, Standard InChIKey, SMILES, Chemical Markup Langauge (CML) XML, image (.png or .svg)</p></li>
+<li><p class="sd-card-text">Usage: <a class="reference external" href="https://opsin.ch.cam.ac.uk/instructions.html">Instructions</a></p></li>
+<li><p class="sd-card-text">Publication: <a class="reference external" href="https://pubs.acs.org/articlesonrequest/AOR-PcYgSy87ettZWfqyvHmN">https://doi.org/10.1021/ci100384d</a></p></li>
+<li><p class="sd-card-text">Website: <a class="reference external" href="https://opsin.ch.cam.ac.uk">https://opsin.ch.cam.ac.uk</a></p></li>
+<li><p class="sd-card-text">Application Programming Interface (API): <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/">https://opsin.ch.cam.ac.uk/opsin/</a></p>
 <ul>
-<li><p>Endpoint: <chemicalname>.cml (e.g., <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/benzene.cml">https://opsin.ch.cam.ac.uk/opsin/benzene.cml</a>)</p></li>
-<li><p>Endpoint: <chemicalname>.stdinchi (e.g., <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/benzene.json">https://opsin.ch.cam.ac.uk/opsin/benzene.json</a>)</p></li>
-<li><p>Endpoint: <chemicalname>.stdinchikey (e.g., <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/benzene.json">https://opsin.ch.cam.ac.uk/opsin/benzene.json</a>)</p></li>
-<li><p>Endpoint: <chemicalname>.smiles (e.g., <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/benzene.json">https://opsin.ch.cam.ac.uk/opsin/benzene.json</a>)</p></li>
-<li><p>Endpoint: <chemicalname>.json (e.g., <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/benzene.json">https://opsin.ch.cam.ac.uk/opsin/benzene.json</a>)</p></li>
-<li><p>Endpoint: <chemicalname>.png (e.g., <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/benzene.png">https://opsin.ch.cam.ac.uk/opsin/benzene.png</a>)</p></li>
-<li><p>Endpoint: <chemicalname>.svg (e.g., <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/benzene.svg">https://opsin.ch.cam.ac.uk/opsin/benzene.svg</a>)</p></li>
+<li><p class="sd-card-text">Endpoint: <chemicalname>.cml (e.g., <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/benzene.cml">https://opsin.ch.cam.ac.uk/opsin/benzene.cml</a>)</p></li>
+<li><p class="sd-card-text">Endpoint: <chemicalname>.stdinchi (e.g., <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/benzene.json">https://opsin.ch.cam.ac.uk/opsin/benzene.json</a>)</p></li>
+<li><p class="sd-card-text">Endpoint: <chemicalname>.stdinchikey (e.g., <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/benzene.json">https://opsin.ch.cam.ac.uk/opsin/benzene.json</a>)</p></li>
+<li><p class="sd-card-text">Endpoint: <chemicalname>.smiles (e.g., <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/benzene.json">https://opsin.ch.cam.ac.uk/opsin/benzene.json</a>)</p></li>
+<li><p class="sd-card-text">Endpoint: <chemicalname>.json (e.g., <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/benzene.json">https://opsin.ch.cam.ac.uk/opsin/benzene.json</a>)</p></li>
+<li><p class="sd-card-text">Endpoint: <chemicalname>.png (e.g., <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/benzene.png">https://opsin.ch.cam.ac.uk/opsin/benzene.png</a>)</p></li>
+<li><p class="sd-card-text">Endpoint: <chemicalname>.svg (e.g., <a class="reference external" href="https://opsin.ch.cam.ac.uk/opsin/benzene.svg">https://opsin.ch.cam.ac.uk/opsin/benzene.svg</a>)</p></li>
 </ul>
 </li>
-<li><p>Code Repository: <a class="github reference external" href="https://github.com/dan2097/opsin">dan2097/opsin</a></p></li>
+<li><p class="sd-card-text">Code Repository: <a class="github reference external" href="https://github.com/dan2097/opsin">dan2097/opsin</a></p></li>
 </ul>
+</div>
+</details><p>Add more content…</p>
 </section>
 
     <script type="text/x-thebe-config">
