@@ -166,12 +166,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ingredients.html">Finding Ingredients</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ingredients/commonchem.html">Repository: Common Chemistry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ingredients/figshare.html">Repository: figshare</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ingredients/zenodo.html">Repository: Zenodo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ingredients/pubchem.html">Data Repository: PubChem</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ingredients/pubchem-pug.html">PubChem PUG-REST API</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ingredients/pubchem-pug-rest1.html">Accessing PubChem through PUG-REST - Part I</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ingredients/pubchem-pug-rest2.html">Accessing PubChem through PUG-REST: Part II</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ingredients/pubchem-pug-rest3.html">Accessing PubChem through PUG-REST: Part III</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../recipes.html">Data Recipes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../recipes.html">Data Recipes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Computing InChIs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="goldbook.html">Accessing the IUPAC Gold Book API in Python</a></li>
@@ -180,12 +186,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="uvvis_metadata.html">Structured UV/Vis (meta)data for small molecule characterisation</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../school/cs_googlesheets_citation_data.html">Importing JSON Citation Data from an API into Google Sheets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../school/cs_spreadsheet_data_import.html">Importing Chemical Data into a Spreadsheet</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../plating.html">Data Plating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../plating.html">Data Plating</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../standards/learn_spectra.html">FAIR formating of (multi, hyper) spectral data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../standards/uniqueidentifiers.html">How To: Unique Identifiers for Chemical Data</a></li>
 </ul>
@@ -528,7 +534,7 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;rdkit.Chem.rdchem.Mol object at 0x126e76b90&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;rdkit.Chem.rdchem.Mol object at 0x11cfcab90&gt;
 </pre></div>
 </div>
 </div>
@@ -569,7 +575,7 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import a file of SMILES strings</span>
 <span class="n">smiles_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;my_smiles.smi&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../files/my_smiles.smi&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
      <span class="k">for</span> <span class="n">smi</span> <span class="ow">in</span> <span class="n">infile</span><span class="p">:</span>
             <span class="n">smiles_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">smi</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span> <span class="c1"># rstrip removes newline</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">smiles_list</span><span class="p">)</span>
@@ -577,25 +583,7 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Import a file of SMILES strings</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">smiles_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;my_smiles.smi&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>      <span class="k">for</span> <span class="n">smi</span> <span class="ow">in</span> <span class="n">infile</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>             <span class="n">smiles_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">smi</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span> <span class="c1"># rstrip removes newline</span>
-
-<span class="nn">File ~/.local/share/virtualenvs/ChemCookbookFork-7MofDs2Q/lib/python3.10/site-packages/IPython/core/interactiveshell.py:286,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">281</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">283</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">284</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">286</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;my_smiles.smi&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;COC(=O)[C@H](CC1=CC=CC=C1)NC(=O)[C@H](CC(=O)O)N&#39;, &#39;COC(=O)[C@@H](CC1=CC=CC=C1)NC(=O)[C@@H](CC(=O)O)N&#39;, &#39;COC(=O)[C@H](CC1=CC=CC=C1)NC(=O)C[C@@H](C(=O)O)N&#39;, &#39;C1=CC=C(C=C1)C[C@@H](C(=O)O)NC(=O)[C@H](CC(=O)O)NC=O&#39;, &#39;C[C@@H](C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)O)N&#39;, &#39;CC(C)C[C@@H](C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)O)NC(=O)C&#39;]
 </pre></div>
 </div>
 </div>
@@ -626,6 +614,11 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;rdkit.Chem.rdchem.Mol object at 0x11cfcb0d0&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x11cfcb060&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x11cfcb140&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x11cfcb530&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x11cfcb5a0&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x11cfcb610&gt;]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -635,12 +628,20 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/413483a68657f0010c06d89bc7be5f51faea67c6b33bbf73321275db7b632a45.png" src="../_images/413483a68657f0010c06d89bc7be5f51faea67c6b33bbf73321275db7b632a45.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop through mols (molecular objects) and calculate InChIs</span>
 <span class="n">InChIs</span> <span class="o">=</span> <span class="p">[</span><span class="n">Chem</span><span class="o">.</span><span class="n">MolToInchi</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span> <span class="k">for</span> <span class="n">mol</span> <span class="ow">in</span> <span class="n">mols</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">InChIs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;InChI=1S/C14H18N2O5/c1-21-14(20)11(7-9-5-3-2-4-6-9)16-13(19)10(15)8-12(17)18/h2-6,10-11H,7-8,15H2,1H3,(H,16,19)(H,17,18)/t10-,11-/m0/s1&#39;, &#39;InChI=1S/C14H18N2O5/c1-21-14(20)11(7-9-5-3-2-4-6-9)16-13(19)10(15)8-12(17)18/h2-6,10-11H,7-8,15H2,1H3,(H,16,19)(H,17,18)/t10-,11-/m1/s1&#39;, &#39;InChI=1S/C14H18N2O5/c1-21-14(20)11(7-9-5-3-2-4-6-9)16-12(17)8-10(15)13(18)19/h2-6,10-11H,7-8,15H2,1H3,(H,16,17)(H,18,19)/t10-,11-/m0/s1&#39;, &#39;InChI=1S/C14H16N2O6/c17-8-15-10(7-12(18)19)13(20)16-11(14(21)22)6-9-4-2-1-3-5-9/h1-5,8,10-11H,6-7H2,(H,15,17)(H,16,20)(H,18,19)(H,21,22)/t10-,11-/m0/s1&#39;, &#39;InChI=1S/C12H16N2O3/c1-8(13)11(15)14-10(12(16)17)7-9-5-3-2-4-6-9/h2-6,8,10H,7,13H2,1H3,(H,14,15)(H,16,17)/t8-,10-/m0/s1&#39;, &#39;InChI=1S/C17H24N2O4/c1-11(2)9-14(18-12(3)20)16(21)19-15(17(22)23)10-13-7-5-4-6-8-13/h4-8,11,14-15H,9-10H2,1-3H3,(H,18,20)(H,19,21)(H,22,23)/t14-,15-/m0/s1&#39;]
 </pre></div>
 </div>
 </div>
@@ -669,11 +670,18 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/15485d305f22f34fbe3e669e8e9a27c9f0920950b8ac8b1ddf1b24248a176b12.svg" src="../_images/15485d305f22f34fbe3e669e8e9a27c9f0920950b8ac8b1ddf1b24248a176b12.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Internally, we have created an Open Babel molecular object</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;openbabel.pybel.Molecule&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -689,12 +697,22 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate InChI</span>
 <span class="n">inchi_output</span> <span class="o">=</span> <span class="n">conv</span><span class="o">.</span><span class="n">WriteString</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">OBMol</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">inchi_output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>InChI=1S/C14H18N2O5/c1-21-14(20)11(7-9-5-3-2-4-6-9)16-13(19)10(15)8-12(17)18/h2-6,10-11H,7-8,15H2,1H3,(H,16,19)(H,17,18)/t10-,11-/m0/s1
 </pre></div>
 </div>
 </div>
@@ -707,12 +725,22 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate InChIKey</span>
 <span class="n">inchikey_output</span> <span class="o">=</span> <span class="n">conv</span><span class="o">.</span><span class="n">WriteString</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">OBMol</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">inchikey_output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>IAOZJIPTCAWIRG-QWRGUYRKSA-N
 </pre></div>
 </div>
 </div>
@@ -724,10 +752,15 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import a file of SMILES</span>
 <span class="n">smiles_list</span> <span class="o">=</span><span class="p">[]</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;my_smiles.smi&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../files/my_smiles.smi&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
      <span class="k">for</span> <span class="n">smi</span> <span class="ow">in</span> <span class="n">infile</span><span class="p">:</span>
             <span class="n">smiles_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">smi</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span> <span class="c1"># rstrip removes newline</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">smiles_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;COC(=O)[C@H](CC1=CC=CC=C1)NC(=O)[C@H](CC(=O)O)N&#39;, &#39;COC(=O)[C@@H](CC1=CC=CC=C1)NC(=O)[C@@H](CC(=O)O)N&#39;, &#39;COC(=O)[C@H](CC1=CC=CC=C1)NC(=O)C[C@@H](C(=O)O)N&#39;, &#39;C1=CC=C(C=C1)C[C@@H](C(=O)O)NC(=O)[C@H](CC(=O)O)NC=O&#39;, &#39;C[C@@H](C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)O)N&#39;, &#39;CC(C)C[C@@H](C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)O)NC(=O)C&#39;]
 </pre></div>
 </div>
 </div>
@@ -737,6 +770,11 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Next,loop through the smiles_list and create OB molecular objects</span>
 <span class="n">ms</span> <span class="o">=</span> <span class="p">[</span><span class="n">pybel</span><span class="o">.</span><span class="n">readstring</span><span class="p">(</span><span class="s2">&quot;smi&quot;</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">smiles_list</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ms</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;openbabel.pybel.Molecule object at 0x11d4da2f0&gt;, &lt;openbabel.pybel.Molecule object at 0x11d4d9b10&gt;, &lt;openbabel.pybel.Molecule object at 0x11d4d9ff0&gt;, &lt;openbabel.pybel.Molecule object at 0x11d4da590&gt;, &lt;openbabel.pybel.Molecule object at 0x11d4d9d80&gt;, &lt;openbabel.pybel.Molecule object at 0x11d4d9f00&gt;]
 </pre></div>
 </div>
 </div>
@@ -750,6 +788,11 @@ About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<di
 <span class="c1"># Loop through mols (molecular objects) and calculate InChIs</span>
 <span class="n">InChIs</span> <span class="o">=</span> <span class="p">[</span><span class="n">conv</span><span class="o">.</span><span class="n">WriteString</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">OBMol</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">ms</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">InChIs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;InChI=1S/C14H18N2O5/c1-21-14(20)11(7-9-5-3-2-4-6-9)16-13(19)10(15)8-12(17)18/h2-6,10-11H,7-8,15H2,1H3,(H,16,19)(H,17,18)/t10-,11-/m0/s1&#39;, &#39;InChI=1S/C14H18N2O5/c1-21-14(20)11(7-9-5-3-2-4-6-9)16-13(19)10(15)8-12(17)18/h2-6,10-11H,7-8,15H2,1H3,(H,16,19)(H,17,18)/t10-,11-/m1/s1&#39;, &#39;InChI=1S/C14H18N2O5/c1-21-14(20)11(7-9-5-3-2-4-6-9)16-12(17)8-10(15)13(18)19/h2-6,10-11H,7-8,15H2,1H3,(H,16,17)(H,18,19)/t10-,11-/m0/s1&#39;, &#39;InChI=1S/C14H16N2O6/c17-8-15-10(7-12(18)19)13(20)16-11(14(21)22)6-9-4-2-1-3-5-9/h1-5,8,10-11H,6-7H2,(H,15,17)(H,16,20)(H,18,19)(H,21,22)/t10-,11-/m0/s1&#39;, &#39;InChI=1S/C12H16N2O3/c1-8(13)11(15)14-10(12(16)17)7-9-5-3-2-4-6-9/h2-6,8,10H,7,13H2,1H3,(H,14,15)(H,16,17)/t8-,10-/m0/s1&#39;, &#39;InChI=1S/C17H24N2O4/c1-11(2)9-14(18-12(3)20)16(21)19-15(17(22)23)10-13-7-5-4-6-8-13/h4-8,11,14-15H,9-10H2,1-3H3,(H,18,20)(H,19,21)(H,22,23)/t14-,15-/m0/s1&#39;]
 </pre></div>
 </div>
 </div>

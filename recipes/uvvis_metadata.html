@@ -166,12 +166,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ingredients.html">Finding Ingredients</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ingredients/commonchem.html">Repository: Common Chemistry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ingredients/figshare.html">Repository: figshare</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ingredients/zenodo.html">Repository: Zenodo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ingredients/pubchem.html">Data Repository: PubChem</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ingredients/pubchem-pug.html">PubChem PUG-REST API</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ingredients/pubchem-pug-rest1.html">Accessing PubChem through PUG-REST - Part I</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ingredients/pubchem-pug-rest2.html">Accessing PubChem through PUG-REST: Part II</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ingredients/pubchem-pug-rest3.html">Accessing PubChem through PUG-REST: Part III</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../recipes.html">Data Recipes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../recipes.html">Data Recipes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="computing_inchis.html">Computing InChIs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="goldbook.html">Accessing the IUPAC Gold Book API in Python</a></li>
@@ -180,12 +186,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Structured UV/Vis (meta)data for small molecule characterisation</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../school/cs_googlesheets_citation_data.html">Importing JSON Citation Data from an API into Google Sheets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../school/cs_spreadsheet_data_import.html">Importing Chemical Data into a Spreadsheet</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../plating.html">Data Plating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../plating.html">Data Plating</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../standards/learn_spectra.html">FAIR formating of (multi, hyper) spectral data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../standards/uniqueidentifiers.html">How To: Unique Identifiers for Chemical Data</a></li>
 </ul>
@@ -445,16 +451,30 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-reporting-using-jupyter-notebook-python">4. Data reporting using Jupyter Notebook (Python)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tools">4.1 The tools</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-jupyter-a-jupyter-notebook">What is Jupyter/a Jupyter Notebook?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-anaconda">What is Anaconda?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-tools">Installing the tools</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-notebook-on-your-computer">Running the notebook (on your computer)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tools">4.1 The tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-jupyter-a-jupyter-notebook">What is Jupyter/a Jupyter Notebook?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-anaconda">What is Anaconda?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-tools">Installing the tools</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-notebook-on-your-computer">Running the notebook (on your computer)</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplar-code-for-data-reporting">4.2 Exemplar code for data reporting</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#glossary-of-python-terms">5. Glossary of Python terms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#glossary-of-python-terms">5. Glossary of Python terms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#package">Package</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment">Comment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method">Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-structure">Data Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#float">Float</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function">Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">Dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable">Variable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#doc-string">Doc String</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environment">Virtual Environment</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -466,7 +486,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="structured-uv-vis-meta-data-for-small-molecule-characterisation">
+  <section class="tex2jax_ignore mathjax_ignore" id="structured-uv-vis-meta-data-for-small-molecule-characterisation">
 <h1>Structured UV/Vis (meta)data for small molecule characterisation<a class="headerlink" href="#structured-uv-vis-meta-data-for-small-molecule-characterisation" title="Permalink to this headline">#</a></h1>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -649,27 +669,26 @@ Markdown (.ipynb)
 <p>The UV/Vis reference data file ‘sample_data.jdx’ for salicylic acid in JCAMP-DX format is from the NIST Standard Reference Database available from the <a class="reference external" href="https://webbook.nist.gov/">NIST Chemistry WebBook</a>.</p>
 <section id="the-tools">
 <h3>4.1 The tools<a class="headerlink" href="#the-tools" title="Permalink to this headline">#</a></h3>
-</section>
 <section id="what-is-python">
-<h3>What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this headline">#</a></h3>
+<h4>What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this headline">#</a></h4>
 <p>From the official python website, <a class="reference external" href="http://Python.org">Python.org</a>:</p>
 <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. Python’s simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse. The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.</p>
 </section>
 <section id="what-is-jupyter-a-jupyter-notebook">
-<h3>What is Jupyter/a Jupyter Notebook?<a class="headerlink" href="#what-is-jupyter-a-jupyter-notebook" title="Permalink to this headline">#</a></h3>
+<h4>What is Jupyter/a Jupyter Notebook?<a class="headerlink" href="#what-is-jupyter-a-jupyter-notebook" title="Permalink to this headline">#</a></h4>
 <p>Jupyter (formerly IPython Notebook) is an open-source project that lets you easily combine markdown text and executable Python source code on one canvas called a notebook. They are both human readable documents containing the analysis description and the results (figures, tables, etc..) as well as executable documents which run the code to perform the data analysis.</p>
 </section>
 <section id="what-is-anaconda">
-<h3>What is Anaconda?<a class="headerlink" href="#what-is-anaconda" title="Permalink to this headline">#</a></h3>
+<h4>What is Anaconda?<a class="headerlink" href="#what-is-anaconda" title="Permalink to this headline">#</a></h4>
 <p>Anaconda can be thought of as a one stop shop for all things Python and data science. It’s almost an umbrella; by downloading Anaconda you also get Python, Jupyter notebooks and a whole host of other useful programmes. It is also a package manager and virtual environment manager.</p>
 </section>
 <section id="installing-the-tools">
-<h3>Installing the tools<a class="headerlink" href="#installing-the-tools" title="Permalink to this headline">#</a></h3>
+<h4>Installing the tools<a class="headerlink" href="#installing-the-tools" title="Permalink to this headline">#</a></h4>
 <p>The easiest way to install Python is through the package and virtual environment manager Anaconda. Anaconda is free and open source and the Individual Edition can be installed from <a class="reference external" href="https://www.anaconda.com/">https://www.anaconda.com/</a>.</p>
 <p>Once Anaconda is installed you can create a virtual environment, load Jupyter into the environment and run this notebook.</p>
 </section>
 <section id="running-the-notebook-on-your-computer">
-<h3>Running the notebook (on your computer)<a class="headerlink" href="#running-the-notebook-on-your-computer" title="Permalink to this headline">#</a></h3>
+<h4>Running the notebook (on your computer)<a class="headerlink" href="#running-the-notebook-on-your-computer" title="Permalink to this headline">#</a></h4>
 <ol class="arabic simple">
 <li><p>Make sure Anaconda is installed on your computer</p></li>
 <li><p>Use the Anaconda navigator (or the command line) to create a virutal environment</p></li>
@@ -680,6 +699,7 @@ Markdown (.ipynb)
 <li><p>You can edit code chunks by clicking on them and typing</p></li>
 <li><p>You can run code chunks by clicking on them and pressing play (in the banner above) or by pressing shift+enter</p></li>
 </ol>
+</section>
 </section>
 <section id="exemplar-code-for-data-reporting">
 <h3>4.2 Exemplar code for data reporting<a class="headerlink" href="#exemplar-code-for-data-reporting" title="Permalink to this headline">#</a></h3>
@@ -696,30 +716,9 @@ Markdown (.ipynb)
 <p>Next, specify the file path that your file is saved at, and use the jcamp_read() method to import the data into your script</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;sample_data.jdx&#39;</span>             <span class="c1"># Replace with your specific file path</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;../files/sample_data.jdx&#39;</span>             <span class="c1"># Replace with your specific file path</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">data_dictionary</span> <span class="o">=</span> <span class="n">jcamp_read</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>    <span class="c1"># Store the contents of the jdx file in a python dictionary</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;sample_data.jdx&#39;</span>             <span class="c1"># Replace with your specific file path</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">data_dictionary</span> <span class="o">=</span> <span class="n">jcamp_read</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>    <span class="c1"># Store the contents of the jdx file in a python dictionary</span>
-
-<span class="nn">File ~/.local/share/virtualenvs/ChemCookbookFork-7MofDs2Q/lib/python3.10/site-packages/IPython/core/interactiveshell.py:286,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">281</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">283</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">284</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">286</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;sample_data.jdx&#39;
 </pre></div>
 </div>
 </div>
@@ -797,7 +796,7 @@ with descriptive and informative names) that will hold the data associated with 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c74ffed87c7a166435ab60395fac30b126195f650144aed4af1f705316830409.png" src="../_images/c74ffed87c7a166435ab60395fac30b126195f650144aed4af1f705316830409.png" />
+<img alt="../_images/9217aafdded0a261d937220c6d757a6973a008c74c5d55fe362df59516594726.png" src="../_images/9217aafdded0a261d937220c6d757a6973a008c74c5d55fe362df59516594726.png" />
 </div>
 </div>
 <p>Save the figure</p>
@@ -888,28 +887,48 @@ with descriptive and informative names) that will hold the data associated with 
 </section>
 <section id="glossary-of-python-terms">
 <h2>5. Glossary of Python terms<a class="headerlink" href="#glossary-of-python-terms" title="Permalink to this headline">#</a></h2>
-<p><b>Package</b></p>
+<section id="package">
+<h3>Package<a class="headerlink" href="#package" title="Permalink to this headline">#</a></h3>
 <p>When developing a Python script, it’s often necessary to use functionality that is not included in the Python standard library. One way to access this additional functionality is by importing Python packages into your script. These packages, also known as modules, provide pre-built functionality and code that can be easily integrated into your script, saving you the time and effort of having to write everything from scratch. They can include functions, classes, or other objects that are ready to use or extend, and are written by other developers to solve specific problems or tasks. In addition, importing packages can also help to keep your code organized and maintainable, by breaking it up into reusable and functional blocks. In summary, we import packages into scripts to leverage pre-built functionality and take advantage of the expertise of the Python community, allowing us to focus on the specific problem we are trying to solve.</p>
-<p><b>Comment</b></p>
+</section>
+<section id="comment">
+<h3>Comment<a class="headerlink" href="#comment" title="Permalink to this headline">#</a></h3>
 <p>In Python, a comment is a piece of text that is ignored by the interpreter when the code is executed. Comments are used to explain the purpose and logic of the code, and to make it easier for other people (or yourself) to understand and maintain the code. Comments can be a single line or span multiple lines and can start with a # symbol or be encapsulated by tiple quotes “”” “””. The text within the comment is only intended for human readers. Comments are very useful to add explanations and context to code, also it can help to keep track of the progress, problems or ideas you had when working in a script. Use them liberally.</p>
-<p><b>Method</b></p>
+</section>
+<section id="method">
+<h3>Method<a class="headerlink" href="#method" title="Permalink to this headline">#</a></h3>
 <p>A method is a function that is associated with an object. It is defined inside a class, and it can access and manipulate the attributes and state of the object it is associated with. Methods contain functionality that is often useful for the work you are doing e.g def for beer_lambert in the exemplar code above (section 4)</p>
-<p><b>Data Structure</b></p>
+</section>
+<section id="data-structure">
+<h3>Data Structure<a class="headerlink" href="#data-structure" title="Permalink to this headline">#</a></h3>
 <p>In Python (and in computer science in general), a data structure is a way of organizing and storing data in a computer’s memory so that it can be efficiently accessed and modified.</p>
-<p><b>Float</b></p>
+</section>
+<section id="float">
+<h3>Float<a class="headerlink" href="#float" title="Permalink to this headline">#</a></h3>
 <p>A float (short for “floating-point number”) is a type of numeric data that can represent decimal values.</p>
-<p><b>Function</b></p>
+</section>
+<section id="function">
+<h3>Function<a class="headerlink" href="#function" title="Permalink to this headline">#</a></h3>
 <p>In Python, a function is a block of organized, reusable code that performs a specific task. Functions provide a way to organize your code into logical, modular chunks that can be easily reused and tested.</p>
 <p>A Python function is defined using the def keyword, followed by the function name, a pair of parentheses (), and a colon :. The code inside the function is indented under the definition line.</p>
-<p><b>Dictionary</b></p>
+</section>
+<section id="dictionary">
+<h3>Dictionary<a class="headerlink" href="#dictionary" title="Permalink to this headline">#</a></h3>
 <p>A dictionary is a built-in data structure that stores a collection of key-value pairs, where each key is unique. Dictionaries are also commonly known as associative arrays or hash maps. They are similar to lists or arrays in other programming languages, but the elements in a dictionary are accessed via keys rather than an index.</p>
-<p><b>Variable</b></p>
+</section>
+<section id="variable">
+<h3>Variable<a class="headerlink" href="#variable" title="Permalink to this headline">#</a></h3>
 <p>In Python, a variable is a named location in memory that is used to store a value. A variable can be thought of as a “container” that holds a value, and the value can be of any data type (e.g., a number, a string, a list, etc.).</p>
 <p>To create a variable in Python, you simply give it a name and assign a value to it using the assignment operator (=).</p>
-<p><b>Doc String</b></p>
+</section>
+<section id="doc-string">
+<h3>Doc String<a class="headerlink" href="#doc-string" title="Permalink to this headline">#</a></h3>
 <p>A docstring in Python is a string that appears at the top of a module, class, or function definition. Docstrings are used to provide a brief description of what the code does, as well as any information on the arguments, return values, and other details of the code.</p>
-<p><b>Virtual Environment</b></p>
+</section>
+<section id="virtual-environment">
+<h3>Virtual Environment<a class="headerlink" href="#virtual-environment" title="Permalink to this headline">#</a></h3>
 <p>You may have multiple Python projects happening at once. A virtual environment is a named, isolated copy of Python that has its own files and packages. Anything done inside a virtual environment is specific to that environment and won’t affect any other projects. All the dependencies and packages you install will be sandboxed inside the environment you are using. You should therefore have a separate virtual environment for each separate project.</p>
+</section>
 </section>
 </section>
 
@@ -988,16 +1007,30 @@ with descriptive and informative names) that will hold the data associated with 
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-reporting-using-jupyter-notebook-python">4. Data reporting using Jupyter Notebook (Python)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tools">4.1 The tools</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-jupyter-a-jupyter-notebook">What is Jupyter/a Jupyter Notebook?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-anaconda">What is Anaconda?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-tools">Installing the tools</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-notebook-on-your-computer">Running the notebook (on your computer)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tools">4.1 The tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-jupyter-a-jupyter-notebook">What is Jupyter/a Jupyter Notebook?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-anaconda">What is Anaconda?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-tools">Installing the tools</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-notebook-on-your-computer">Running the notebook (on your computer)</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplar-code-for-data-reporting">4.2 Exemplar code for data reporting</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#glossary-of-python-terms">5. Glossary of Python terms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#glossary-of-python-terms">5. Glossary of Python terms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#package">Package</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment">Comment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method">Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-structure">Data Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#float">Float</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function">Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">Dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable">Variable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#doc-string">Doc String</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environment">Virtual Environment</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

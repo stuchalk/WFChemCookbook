@@ -165,12 +165,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="ingredients.html">Finding Ingredients</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="ingredients/commonchem.html">Repository: Common Chemistry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ingredients/figshare.html">Repository: figshare</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ingredients/zenodo.html">Repository: Zenodo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingredients/pubchem.html">Data Repository: PubChem</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ingredients/pubchem-pug.html">PubChem PUG-REST API</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ingredients/pubchem-pug-rest1.html">Accessing PubChem through PUG-REST - Part I</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ingredients/pubchem-pug-rest2.html">Accessing PubChem through PUG-REST: Part II</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ingredients/pubchem-pug-rest3.html">Accessing PubChem through PUG-REST: Part III</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="recipes.html">Data Recipes</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="recipes.html">Data Recipes</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="recipes/computing_inchis.html">Computing InChIs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="recipes/dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="recipes/goldbook.html">Accessing the IUPAC Gold Book API in Python</a></li>
@@ -179,12 +185,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="recipes/uvvis_metadata.html">Structured UV/Vis (meta)data for small molecule characterisation</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="school/cs_googlesheets_citation_data.html">Importing JSON Citation Data from an API into Google Sheets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="school/cs_spreadsheet_data_import.html">Importing Chemical Data into a Spreadsheet</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="plating.html">Data Plating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="plating.html">Data Plating</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="standards/learn_spectra.html">FAIR formating of (multi, hyper) spectral data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="standards/uniqueidentifiers.html">How To: Unique Identifiers for Chemical Data</a></li>
 </ul>
@@ -396,6 +402,15 @@ document.write(`
 <dl class="citation">
 <dt class="label" id="id3"><span class="brackets">HJA+22</span></dt>
 <dd><p>Robert M. Hanson, Damien Jeannerat, Mark Archibald, Ian J. Bruno, Stuart J. Chalk, Antony N. Davies, Robert J. Lancashire, Jeffrey Lang, and Henry S. Rzepa. Iupac specification for the fair management of spectroscopic data in chemistry (iupac fairspec) – guiding principles. <em>Pure and Applied Chemistry</em>, 94(6):623–636, 2022. URL: <a class="reference external" href="https://doi.org/10.1515/pac-2021-2009">https://doi.org/10.1515/pac-2021-2009</a>, <a class="reference external" href="https://doi.org/doi:10.1515/pac-2021-2009">doi:doi:10.1515/pac-2021-2009</a>.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets">Kim21</span></dt>
+<dd><p>Sunghwan Kim. Exploring chemical information in pubchem. <em>Current Protocols</em>, 1(8):e217, 2021. URL: <a class="reference external" href="https://doi.org/10.1002/cpz1.217">https://doi.org/10.1002/cpz1.217</a>.</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets">KCC+23</span></dt>
+<dd><p>Sunghwan Kim, Jie Chen, Tiejun Cheng, Asta Gindulyte, Jia He, Siqian He, Qingliang Li, Benjamin A. Shoemaker, Paul A. Thiessen, Bo Yu, Leonid Zaslavsky, Jian Zhang, and Evan E. Bolton. PubChem 2023 update. <em>Nucleic Acids Research</em>, 51(D1):D1373–D1380, 2023. URL: <a class="reference external" href="https://doi.org/10.1093/nar/gkac956">https://doi.org/10.1093/nar/gkac956</a>.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets">KCH+22</span></dt>
+<dd><p>Sunghwan Kim, Tiejun Cheng, Siqian He, Paul A. Thiessen, Qingliang Li, Asta Gindulyte, and Evan E. Bolton. Pubchem protein, gene, pathway, and taxonomy data collections: bridging biology and chemistry through target-centric views of pubchem data. <em>Journal of Molecular Biology</em>, 434(11):167514, 2022. URL: <a class="reference external" href="https://doi.org/10.1016/j.jmb.2022.167514">https://doi.org/10.1016/j.jmb.2022.167514</a>.</p>
 </dd>
 <dt class="label" id="id2"><span class="brackets">Wil16</span></dt>
 <dd><p>Mark D. et al. Wilkinson. The fair guiding principles for scientific data management and stewardship. <em>Scientific Data</em>, 3:160018, 2016. <a class="reference external" href="https://doi.org/10.1038/sdata.2016.18">doi:10.1038/sdata.2016.18</a>.</p>
