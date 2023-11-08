@@ -1,6 +1,6 @@
 # FAIR formating of (multi, hyper) spectral data
 
-```{dropdown} About this interactive ![icons](../images/rocket.png) recipe
+```{dropdown} About this interactive ![icons](../static/img/rocket.png) recipe
 - Author: [Jordi Cuadros](https://orcid.org/0000-0001-6513-9140)
 - Reviewer: 
 - Topics: Spectral data, MS, Spectral data processing, 

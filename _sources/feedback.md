@@ -1,4 +1,4 @@
-# Help Improve the FAIR Chemistry Cookbook
+# Help Us! Provide feeback
 
 Please review the book content, provide feedback and share your ideas for additional contributions. 
 * [Questionnaire](https://forms.gle/mnPiXpnWwf7928wi9) 

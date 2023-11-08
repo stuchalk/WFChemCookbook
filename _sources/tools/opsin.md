@@ -1,6 +1,6 @@
 # OPSIN: Open Parser for Systematic IUPAC Nomenclature
 
-```{dropdown} About this interactive ![icons](../images/rocket.png) recipe
+```{dropdown} About this interactive ![icons](../static/img/rocket.png) recipe
 - Function: IUPAC chemical name to chemical identifier converter
 - Format: Website for form based queries and URL base API
 - Input: IUPAC systematic chemical name
