@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Background Material for Users of the FAIR Chemistry Cookbook" href="school.html" />
+    <link rel="next" title="Extracting dissocation constants from compiled reference works" href="menus/men_pkadata_extraction.html" />
     <link rel="prev" title="Structured UV/Vis (meta)data for small molecule characterisation" href="recipes/rec_uvvis_metadata.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -162,21 +162,33 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="utensils.html">Utensils to Use</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="tools/too_opsin_api.html">OPSIN: Open Parser for Systematic IUPAC Nomenclature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utensils/utn_opsin_api.html">OPSIN: Open Parser for Systematic IUPAC Nomenclature</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="ingredients.html">Finding Ingredients</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="ingredients/ing_commonchem.html">Repository: Common Chemistry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ingredients/ing_figshare.html">Repository: figshare</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ingredients/ing_pubchem.html">Data Repository: PubChem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ingredients/ing_pubchem_pugrest.html">PubChem PUG-REST API</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ingredients/ing_pubchem_pugrest.html">PubChem PUG-REST API</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ingredients/ing_pubchem_pugrest1.html">Accessing PubChem through PUG-REST - Part I</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ingredients/ing_pubchem_pugrest2.html">Accessing PubChem through PUG-REST: Part II</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ingredients/ing_pubchem_pugrest3.html">Accessing PubChem through PUG-REST: Part III</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="ingredients/ing_pubchem_pugrest1.html">Accessing PubChem through PUG-REST - Part I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ingredients/ing_pubchem_pugrest2.html">Accessing PubChem through PUG-REST: Part II</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ingredients/ing_pubchem_pugrest3.html">Accessing PubChem through PUG-REST: Part III</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ingredients/ing_zenodo.html">Repository: Zenodo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingredients/ing_pubchem.html">Data Repository: PubChem</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ingredients/ing_pubchem_pugrest.html">PubChem PUG-REST API</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ingredients/ing_pubchem_pugrest1.html">Accessing PubChem through PUG-REST - Part I</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ingredients/ing_pubchem_pugrest2.html">Accessing PubChem through PUG-REST: Part II</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ingredients/ing_pubchem_pugrest3.html">Accessing PubChem through PUG-REST: Part III</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="recipes.html">Data Recipes</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="recipes.html">Data Recipes</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="recipes/rec_computing_inchis.html">Computing InChIs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="recipes/rec_dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="recipes/rec_goldbook_api.html">Accessing the IUPAC Gold Book API in Python</a></li>
@@ -185,15 +197,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="recipes/rec_uvvis_metadata.html">Structured UV/Vis (meta)data for small molecule characterisation</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">FAIR Menus</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">FAIR Menus</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="menus/men_pkadata_extraction.html">Extracting dissocation constants from compiled reference works</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="school/sch_excel_import.html">Importing Chemical Data into a Spreadsheet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="school/sch_sheets_citations.html">Importing JSON Citation Data from an API into Google Sheets</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="plating.html">Data Plating</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="plating.html">Data Plating</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="standards/std_inchi.html">The IUPAC International Chemical Identifier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="standards/std_learn_spectra.html">FAIR formating of (multi, hyper) spectral data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="standards/std_unique_identifiers.html">Unique Identifiers for Chemical Data</a></li>
 </ul>
@@ -201,6 +215,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="development.html">Cookbook development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
@@ -446,11 +461,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="school.html"
+       href="menus/men_pkadata_extraction.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Background Material for Users of the FAIR Chemistry Cookbook</p>
+        <p class="prev-next-title">Extracting dissocation constants from compiled reference works</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
