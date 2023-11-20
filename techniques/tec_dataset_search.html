@@ -60,12 +60,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'recipes/rec_dataset_search';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'techniques/tec_dataset_search';</script>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Accessing the IUPAC Gold Book API in Python" href="rec_goldbook_api.html" />
-    <link rel="prev" title="Computing InChIs" href="rec_computing_inchis.html" />
+    <link rel="next" title="Preparing Chemical Data for FAIR Sharing - A Minimalist Approach" href="tec_sharing_chemdata.html" />
+    <link rel="prev" title="FAIR Chemistry Cooking Techniques" href="../techniques.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -157,8 +157,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">The FAIR Chemistry Cookbook</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../cooking.html">The Joy of Cooking</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../techniques.html">Cooking Techniques</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../techniques/tec_sharing_chemdata.html">Preparing Chemical Data for FAIR Sharing - A Minimalist Approach</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../techniques.html">Cooking Techniques</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Finding a Findable Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tec_sharing_chemdata.html">Preparing Chemical Data for FAIR Sharing - A Minimalist Approach</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../utensils.html">Utensils to Use</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -175,17 +176,15 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../recipes.html">Data Recipes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="rec_computing_inchis.html">Computing InChIs</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Finding a Findable Dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rec_goldbook_api.html">Accessing the IUPAC Gold Book API in Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rec_iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rec_opsin_api.html">Using the OPSIN API in Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rec_uvvis_metadata.html">Structured UV/Vis (meta)data for small molecule characterisation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../recipes.html">Data Recipes</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../recipes/rec_computing_inchis.html">Computing InChIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../recipes/rec_goldbook_api.html">Accessing the IUPAC Gold Book API in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../recipes/rec_opsin_api.html">Using the OPSIN API in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../recipes/rec_uvvis_metadata.html">Structured UV/Vis (meta)data for small molecule characterisation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../menus.html">FAIR Menus</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../menus/men_pkadata_extraction.html">Extracting dissocation constants from compiled reference works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menus/men_iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -259,7 +258,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/IUPAC/WFChemCookbook/main?urlpath=tree/book/recipes/rec_dataset_search.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/IUPAC/WFChemCookbook/main?urlpath=tree/book/techniques/tec_dataset_search.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -277,7 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/IUPAC/WFChemCookbook/blob/main/book/recipes/rec_dataset_search.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/IUPAC/WFChemCookbook/blob/main/book/techniques/tec_dataset_search.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +324,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/IUPAC/WFChemCookbook/issues/new?title=Issue%20on%20page%20%2Frecipes/rec_dataset_search.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/IUPAC/WFChemCookbook/issues/new?title=Issue%20on%20page%20%2Ftechniques/tec_dataset_search.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -355,7 +354,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/recipes/rec_dataset_search.ipynb" target="_blank"
+      <li><a href="../_sources/techniques/tec_dataset_search.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -662,8 +661,8 @@ About this interactive <img alt="icons" src="../_images/rocket1.png" /> recipe<d
         &quot;url&quot;: &quot;https://ecmdb.ca/&quot;
     },
     {
-        &quot;name&quot;: &quot;Egon Willighagen (Dept. of Bioinformatics - BiGCaT, Maastricht University)&quot;,
-        &quot;url&quot;: &quot;https://chem-bla-ics.blogspot.com/&quot;
+        &quot;name&quot;: &quot;Egon Willighagen, Department of Bioinformatics - BiGCaT, Maastricht University&quot;,
+        &quot;url&quot;: &quot;https://www.maastrichtuniversity.nl/el-willighagen&quot;
     },
     {
         &quot;name&quot;: &quot;EPA Air Toxics&quot;,
@@ -918,6 +917,10 @@ About this interactive <img alt="icons" src="../_images/rocket1.png" /> recipe<d
         &quot;url&quot;: &quot;https://www.uniprot.org/&quot;
     },
     {
+        &quot;name&quot;: &quot;UVCBs and Multi-Constituent Substances (MCS) Committee&quot;,
+        &quot;url&quot;: &quot;https://hesiglobal.org/uvcb/&quot;
+    },
+    {
         &quot;name&quot;: &quot;Wikidata&quot;,
         &quot;url&quot;: &quot;https://www.wikidata.org/wiki/Wikidata:Main_Page&quot;
     },
@@ -963,7 +966,7 @@ has the kind of data you are looking for. The code below accesses the FAIR shari
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;success&#39;: True, &#39;jwt&#39;: &#39;eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0YjVkNzQyMi1hOTg3LTRlZWYtYjQyYi1hN2U3Yjc2MTM0ZTEiLCJzdWIiOiI4NTA5Iiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjk5NTU3NjY1LCJleHAiOjE2OTk2NDQwNjV9.jxWFVeXXfUCcvXOjcNCa68M1PD4wVdXyGmDTm8PYJL8&#39;, &#39;username&#39;: &#39;ChemCookbook&#39;, &#39;id&#39;: 8509, &#39;role&#39;: &#39;user&#39;, &#39;profile_type&#39;: &#39;none&#39;, &#39;watched_records&#39;: [], &#39;is_curator&#39;: False, &#39;is_super_curator&#39;: False, &#39;third_party&#39;: False, &#39;expiry&#39;: 1699644065, &#39;message&#39;: &#39;Authentication successful&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;success&#39;: True, &#39;jwt&#39;: &#39;eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0YjVkNzQyMi1hOTg3LTRlZWYtYjQyYi1hN2U3Yjc2MTM0ZTEiLCJzdWIiOiI4NTA5Iiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNzAwNTEzNDU1LCJleHAiOjE3MDA1OTk4NTV9.XJJNP5VCD5K-UHCDgKEU-Cftixsw_m59lmAgWE9nRJY&#39;, &#39;username&#39;: &#39;ChemCookbook&#39;, &#39;id&#39;: 8509, &#39;role&#39;: &#39;user&#39;, &#39;profile_type&#39;: &#39;none&#39;, &#39;watched_records&#39;: [], &#39;is_curator&#39;: False, &#39;is_super_curator&#39;: False, &#39;third_party&#39;: False, &#39;expiry&#39;: 1700599855, &#39;message&#39;: &#39;Authentication successful&#39;}
 </pre></div>
 </div>
 </div>
@@ -1135,8 +1138,8 @@ FAIRsharing record for: EMODnet Chemistry: https://fairsharing.org/10.25504/FAIR
 FAIRsharing record for: ioChem-BD: https://fairsharing.org/10.25504/FAIRsharing.lwW6a1
 FAIRsharing record for: Royal Society of Chemistry - Data policy: https://fairsharing.org/10.25504/FAIRsharing.egbgwm
 FAIRsharing record for: MINAS - A Database of Metal Ions in Nucleic AcidS: https://fairsharing.org/10.25504/FAIRsharing.wqtfkv
-FAIRsharing record for: Beilstein Journal of Organic Chemistry: https://fairsharing.org/10.25504/FAIRsharing.7GA79k
 FAIRsharing record for: CAS Registry Number: https://fairsharing.org/10.25504/FAIRsharing.r7Kwy7
+FAIRsharing record for: Beilstein Journal of Organic Chemistry: https://fairsharing.org/10.25504/FAIRsharing.7GA79k
 FAIRsharing record for: ChemSpider: https://fairsharing.org/10.25504/FAIRsharing.96f3gm
 FAIRsharing record for: Swedish Ocean Archive: https://fairsharing.org/10.25504/FAIRsharing.npf403
 FAIRsharing record for: Chemical Markup Language: https://fairsharing.org/10.25504/FAIRsharing.3mdt9n
@@ -1149,10 +1152,10 @@ FAIRsharing record for: Dot Bracket Notation (DBN) - Vienna Format: https://fair
 FAIRsharing record for: Name Reaction Ontology: https://fairsharing.org/10.25504/FAIRsharing.w4tncg
 FAIRsharing record for: Molecular Process Ontology: https://fairsharing.org/10.25504/FAIRsharing.mct09a
 FAIRsharing record for: Chemical Methods Ontology: https://fairsharing.org/10.25504/FAIRsharing.9j4wh2
-FAIRsharing record for: American Chemical Society - Journal of the American Chemical Society - Author Guidelines: https://fairsharing.org/10.25504/FAIRsharing.f2b982
 FAIRsharing record for: MolMeDB: Molecules on Membranes Database: https://fairsharing.org/10.25504/FAIRsharing.CWzk3C
 FAIRsharing record for: Geological and Environmental Reference Materials: https://fairsharing.org/10.25504/FAIRsharing.219aec
 FAIRsharing record for: IUPAC Compendium of Chemical Terminology: https://fairsharing.org/10.25504/FAIRsharing.OsiqlF
+FAIRsharing record for: IUPAC Periodic Table of the Elements: https://fairsharing.org/10.25504/FAIRsharing.92473c
 </pre></div>
 </div>
 </div>
@@ -1174,7 +1177,7 @@ FAIRsharing record for: IUPAC Compendium of Chemical Terminology: https://fairsh
         },
         kernelOptions: {
             name: "python3",
-            path: "./recipes"
+            path: "./techniques"
         },
         predefinedOutput: true
     }
@@ -1193,20 +1196,20 @@ FAIRsharing record for: IUPAC Compendium of Chemical Terminology: https://fairsh
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="rec_computing_inchis.html"
+       href="../techniques.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Computing InChIs</p>
+        <p class="prev-next-title">FAIR Chemistry Cooking Techniques</p>
       </div>
     </a>
     <a class="right-next"
-       href="rec_goldbook_api.html"
+       href="tec_sharing_chemdata.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Accessing the IUPAC Gold Book API in Python</p>
+        <p class="prev-next-title">Preparing Chemical Data for FAIR Sharing - A Minimalist Approach</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
