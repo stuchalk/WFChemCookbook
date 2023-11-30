@@ -29,10 +29,10 @@ as long as you have enough information to come up with a legitimate IUPAC name f
 OPSIN (Open Parser for Systematic IUPAC Nomenclature) is a relatively simple website where you can enter the IUPAC name
 for a compound and retrieve many common identifiers for the structure.  OPSIN has been around in its current form since 
 2009 and was developed by Daniel Lowe as part of his PhD.  Daniel has supported the site since then and continues to
-add updates as he can based on user issues/requests.
+add updates as he can, based on user issues/requests.
 
 OPSIN can be used by humans via the homepage where a single input box allows you to enter a valid IUPAC name (see figure below).  If you
-dont have an IUPAC name, and you dont have time to learn all the naming rules, the site will return an error with 
+don't have an IUPAC name, and you don't have time to learn all the naming rules, the site will return an error with 
 information that the algorithm could not interpret.  While this might seem like a big negative for the site, it can
 be used to fix mispelling of systematic names amd it is really useful as a teaching tool where you give students a
 structure and ask them to name it, checking the names with OPSIN.  For data science OPSIN also has an [API](https://opsin.ch.cam.ac.uk/instructions.html) and returns

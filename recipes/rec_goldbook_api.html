@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Reuse of Curated Chemical Data" href="rec_iupac_pkadata.html" />
-    <link rel="prev" title="Finding a Findable Dataset" href="rec_dataset_search.html" />
+    <link rel="next" title="Using the OPSIN API in Python" href="rec_opsin_api.html" />
+    <link rel="prev" title="Computing InChIs" href="rec_computing_inchis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -158,6 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../cooking.html">The Joy of Cooking</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../techniques.html">Cooking Techniques</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../techniques/tec_dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../techniques/tec_sharing_chemdata.html">Preparing Chemical Data for FAIR Sharing - A Minimalist Approach</a></li>
 </ul>
 </li>
@@ -177,15 +178,13 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../recipes.html">Data Recipes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="rec_computing_inchis.html">Computing InChIs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rec_dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Accessing the IUPAC Gold Book API in Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rec_iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rec_opsin_api.html">Using the OPSIN API in Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rec_uvvis_metadata.html">Structured UV/Vis (meta)data for small molecule characterisation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../menus.html">FAIR Menus</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../menus/men_pkadata_extraction.html">Extracting dissocation constants from compiled reference works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menus/men_iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -539,7 +538,7 @@ it is better to get the data all at once rather than call the API every time in 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7052 terms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7036 terms
 </pre></div>
 </div>
 </div>
@@ -566,7 +565,7 @@ the Gold Book entries, by removing the HTML markup, so they match the term we ar
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;i&gt;cis&lt;/i&gt;-&lt;i&gt;trans&lt;/i&gt; isomers
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cis-trans isomers
 C01093
 </pre></div>
 </div>
@@ -586,7 +585,7 @@ C01093
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;term&#39;: {&#39;id&#39;: &#39;01093&#39;, &#39;doi&#39;: &#39;10.1351/goldbook.C01093&#39;, &#39;code&#39;: &#39;C01093&#39;, &#39;status&#39;: &#39;current&#39;, &#39;longtitle&#39;: &#39;IUPAC Gold Book - cis-trans isomers&#39;, &#39;title&#39;: &#39;&lt;i&gt;cis&lt;/i&gt;-&lt;i&gt;trans&lt;/i&gt; isomers&#39;, &#39;version&#39;: &#39;2.3.3&#39;, &#39;lastupdated&#39;: &#39;2014-02-24&#39;, &#39;definitions&#39;: [{&#39;id&#39;: &#39;1&#39;, &#39;text&#39;: &#39;Stereoisomeric olefins or cycloalkanes (or hetero-analogues) which differ in the positions of atoms (or groups) relative to a reference plane: in the cis-isomer the atoms are on the same side, in the trans-isomer they are on opposite sides. [image: molecular structures showing cis/trans isomerism]&#39;, &#39;chemicals&#39;: [{&#39;type&#39;: &#39;chemimage&#39;, &#39;title&#39;: &#39;molecular structures showing cis/trans isomerism&#39;, &#39;file&#39;: &#39;https://goldbook.iupac.org/img/inline/C01093.png&#39;}], &#39;links&#39;: [{&#39;title&#39;: &#39;Stereoisomeric&#39;, &#39;type&#39;: &#39;internal&#39;, &#39;url&#39;: &#39;https://goldbook.iupac.org/terms/view/S05983&#39;}, {&#39;title&#39;: &#39;olefins&#39;, &#39;type&#39;: &#39;goldify&#39;, &#39;url&#39;: &#39;https://goldbook.iupac.org/terms/view/O04281&#39;}, {&#39;title&#39;: &#39;cycloalkanes&#39;, &#39;type&#39;: &#39;goldify&#39;, &#39;url&#39;: &#39;https://goldbook.iupac.org/terms/view/C01497&#39;}, {&#39;title&#39;: &#39;isomer&#39;, &#39;type&#39;: &#39;goldify&#39;, &#39;url&#39;: &#39;https://goldbook.iupac.org/terms/view/I03289&#39;}, {&#39;title&#39;: &#39;trans&#39;, &#39;type&#39;: &#39;goldify&#39;, &#39;url&#39;: &#39;https://goldbook.iupac.org/terms/view/C01092&#39;}], &#39;sources&#39;: [&quot;PAC, 1996, 68, 2193. &#39;Basic terminology of stereochemistry (IUPAC Recommendations 1996)&#39; on page 2204 (https://doi.org/10.1351/pac199668122193)&quot;]}], &#39;referencedin&#39;: [{&#39;title&#39;: &#39;Wikipedia - Cis-trans izomerie (cs)&#39;, &#39;url&#39;: &#39;https://cs.wikipedia.org/wiki/Cis-trans_izomerie&#39;}, {&#39;title&#39;: &#39;Wikipedia - Cis-trans izoméria (sk)&#39;, &#39;url&#39;: &#39;https://sk.wikipedia.org/wiki/Cis-trans_izoméria&#39;}, {&#39;title&#39;: &#39;Wikipedia - Cis–trans isomerism (en)&#39;, &#39;url&#39;: &#39;https://en.wikipedia.org/wiki/Cis–trans_isomerism&#39;}, {&#39;title&#39;: &#39;Wikipedia - Isomeria (it)&#39;, &#39;url&#39;: &#39;https://it.wikipedia.org/wiki/Isomeria&#39;}, {&#39;title&#39;: &#39;Wikipedia - Isomeria cis-trans (it)&#39;, &#39;url&#39;: &#39;https://it.wikipedia.org/wiki/Isomeria_cis-trans&#39;}, {&#39;title&#39;: &#39;Wikipedia - Isomeria geométrica (pt)&#39;, &#39;url&#39;: &#39;https://pt.wikipedia.org/wiki/Isomeria_geométrica&#39;}, {&#39;title&#39;: &#39;Wikipedia - Isomería cis-trans (es)&#39;, &#39;url&#39;: &#39;https://es.wikipedia.org/wiki/Isomería_cis-trans&#39;}, {&#39;title&#39;: &#39;Wikipedia - Talk:Isomer (en)&#39;, &#39;url&#39;: &#39;https://en.wikipedia.org/wiki/Talk:Isomer&#39;}, {&#39;title&#39;: &#39;Wikipedia - Talk:Stereoisomerism (en)&#39;, &#39;url&#39;: &#39;https://en.wikipedia.org/wiki/Talk:Stereoisomerism&#39;}, {&#39;title&#39;: &#39;Wikipedia - Цис–транс ізомерія (uk)&#39;, &#39;url&#39;: &#39;https://uk.wikipedia.org/wiki/Цис–транс_ізомерія&#39;}, {&#39;title&#39;: &#39;Wikipedia - ایزومری سیس–ترانس (fa)&#39;, &#39;url&#39;: &#39;https://fa.wikipedia.org/wiki/ایزومری_سیس–ترانس&#39;}, {&#39;title&#39;: &#39;Wikipedia - 顺反异构 (zh)&#39;, &#39;url&#39;: &#39;https://zh.wikipedia.org/wiki/顺反异构&#39;}], &#39;links&#39;: {&#39;html&#39;: &#39;https://goldbook.iupac.org/terms/view/C01093/html&#39;, &#39;json&#39;: &#39;https://goldbook.iupac.org/terms/view/C01093/json&#39;, &#39;xml&#39;: &#39;https://goldbook.iupac.org/terms/view/C01093/xml&#39;, &#39;plain&#39;: &#39;https://goldbook.iupac.org/terms/view/C01093/plain&#39;, &#39;pdf&#39;: &#39;https://goldbook.iupac.org/terms/view/C01093/pdf&#39;}, &#39;citeas&#39;: &#39;IUPAC. Compendium of Chemical Terminology, 2nd ed. (the &quot;Gold Book&quot;). Compiled by A. D. McNaught and A. Wilkinson. Blackwell Scientific Publications, Oxford (1997). Online version (2019-) created by S. J. Chalk. ISBN 0-9678550-9-8. https://doi.org/10.1351/goldbook.&#39;, &#39;license&#39;: &#39;Licensed under Creative Commons Attribution-NoDerivatives (CC BY-NC-ND) 4.0 International (https://creativecommons.org/licenses/by-nc-nd/4.0/)&#39;, &#39;collection_reuse&#39;: &#39;For parties interested in reusing the entire IUPAC Gold Book please contact IUPAC here https://www.cognitoforms.com/IUPAC1/ContactInformationForm&#39;, &#39;disclaimer&#39;: &#39;The International Union of Pure and Applied Chemistry (IUPAC) is continuously reviewing and, where needed, updating terms in the Compendium of Chemical Terminology (the IUPAC Gold Book). Users of these terms are encouraged to include the version of a term with its use and to check regularly for updates to term definitions that you are using.&#39;, &#39;accessed&#39;: &#39;2023-11-09T19:21:18+00:00&#39;}}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;term&#39;: {&#39;id&#39;: &#39;01093&#39;, &#39;doi&#39;: &#39;10.1351/goldbook.C01093&#39;, &#39;code&#39;: &#39;C01093&#39;, &#39;status&#39;: &#39;current&#39;, &#39;longtitle&#39;: &#39;IUPAC Gold Book - cis-trans isomers&#39;, &#39;title&#39;: &#39;&lt;i&gt;cis&lt;/i&gt;-&lt;i&gt;trans&lt;/i&gt; isomers&#39;, &#39;termversion&#39;: &#39;2.3.3&#39;, &#39;lastupdated&#39;: &#39;2014-02-24&#39;, &#39;definitions&#39;: [{&#39;id&#39;: &#39;1&#39;, &#39;text&#39;: &#39;Stereoisomeric olefins or cycloalkanes (or hetero-analogues) which differ in the positions of atoms (or groups) relative to a reference plane: in the cis-isomer the atoms are on the same side, in the trans-isomer they are on opposite sides. [image: molecular structures showing cis/trans isomerism]&#39;, &#39;chemicals&#39;: [{&#39;type&#39;: &#39;chemimage&#39;, &#39;title&#39;: &#39;molecular structures showing cis/trans isomerism&#39;, &#39;file&#39;: &#39;https://goldbook.iupac.org/img/inline/C01093.png&#39;}], &#39;links&#39;: [{&#39;title&#39;: &#39;Stereoisomeric&#39;, &#39;type&#39;: &#39;internal&#39;, &#39;url&#39;: &#39;https://goldbook.iupac.org/terms/view/S05983&#39;}, {&#39;title&#39;: &#39;olefins&#39;, &#39;type&#39;: &#39;goldify&#39;, &#39;url&#39;: &#39;https://goldbook.iupac.org/terms/view/O04281&#39;}, {&#39;title&#39;: &#39;cycloalkanes&#39;, &#39;type&#39;: &#39;goldify&#39;, &#39;url&#39;: &#39;https://goldbook.iupac.org/terms/view/C01497&#39;}, {&#39;title&#39;: &#39;isomer&#39;, &#39;type&#39;: &#39;goldify&#39;, &#39;url&#39;: &#39;https://goldbook.iupac.org/terms/view/I03289&#39;}, {&#39;title&#39;: &#39;trans&#39;, &#39;type&#39;: &#39;goldify&#39;, &#39;url&#39;: &#39;https://goldbook.iupac.org/terms/view/C01092&#39;}], &#39;sources&#39;: [&quot;PAC, 1996, 68, 2193. &#39;Basic terminology of stereochemistry (IUPAC Recommendations 1996)&#39; on page 2204 (https://doi.org/10.1351/pac199668122193)&quot;]}], &#39;referencedin&#39;: [{&#39;title&#39;: &#39;Wikipedia - Cis-trans izomerie (cs)&#39;, &#39;url&#39;: &#39;https://cs.wikipedia.org/wiki/Cis-trans_izomerie&#39;}, {&#39;title&#39;: &#39;Wikipedia - Cis-trans izoméria (sk)&#39;, &#39;url&#39;: &#39;https://sk.wikipedia.org/wiki/Cis-trans_izoméria&#39;}, {&#39;title&#39;: &#39;Wikipedia - Cis–trans isomerism (en)&#39;, &#39;url&#39;: &#39;https://en.wikipedia.org/wiki/Cis–trans_isomerism&#39;}, {&#39;title&#39;: &#39;Wikipedia - Isomeria (it)&#39;, &#39;url&#39;: &#39;https://it.wikipedia.org/wiki/Isomeria&#39;}, {&#39;title&#39;: &#39;Wikipedia - Isomeria cis-trans (it)&#39;, &#39;url&#39;: &#39;https://it.wikipedia.org/wiki/Isomeria_cis-trans&#39;}, {&#39;title&#39;: &#39;Wikipedia - Isomeria geométrica (pt)&#39;, &#39;url&#39;: &#39;https://pt.wikipedia.org/wiki/Isomeria_geométrica&#39;}, {&#39;title&#39;: &#39;Wikipedia - Isomería cis-trans (es)&#39;, &#39;url&#39;: &#39;https://es.wikipedia.org/wiki/Isomería_cis-trans&#39;}, {&#39;title&#39;: &#39;Wikipedia - Talk:Isomer (en)&#39;, &#39;url&#39;: &#39;https://en.wikipedia.org/wiki/Talk:Isomer&#39;}, {&#39;title&#39;: &#39;Wikipedia - Talk:Stereoisomerism (en)&#39;, &#39;url&#39;: &#39;https://en.wikipedia.org/wiki/Talk:Stereoisomerism&#39;}, {&#39;title&#39;: &#39;Wikipedia - Цис-транс изомеризъм (bg)&#39;, &#39;url&#39;: &#39;https://bg.wikipedia.org/wiki/Цис-транс_изомеризъм&#39;}, {&#39;title&#39;: &#39;Wikipedia - Цис–транс ізомерія (uk)&#39;, &#39;url&#39;: &#39;https://uk.wikipedia.org/wiki/Цис–транс_ізомерія&#39;}, {&#39;title&#39;: &#39;Wikipedia - ایزومری سیس–ترانس (fa)&#39;, &#39;url&#39;: &#39;https://fa.wikipedia.org/wiki/ایزومری_سیس–ترانس&#39;}, {&#39;title&#39;: &#39;Wikipedia - 顺反异构 (zh)&#39;, &#39;url&#39;: &#39;https://zh.wikipedia.org/wiki/顺反异构&#39;}], &#39;links&#39;: {&#39;html&#39;: &#39;https://goldbook.iupac.org/terms/view/C01093/html&#39;, &#39;json&#39;: &#39;https://goldbook.iupac.org/terms/view/C01093/json&#39;, &#39;xml&#39;: &#39;https://goldbook.iupac.org/terms/view/C01093/xml&#39;, &#39;plain&#39;: &#39;https://goldbook.iupac.org/terms/view/C01093/plain&#39;, &#39;pdf&#39;: &#39;https://goldbook.iupac.org/terms/view/C01093/pdf&#39;}, &#39;citation&#39;: &quot;Citation: &#39;&lt;i&gt;cis&lt;/i&gt;-&lt;i&gt;trans&lt;/i&gt; isomers&#39; in IUPAC Compendium of Chemical Terminology, 3rd ed. International Union of Pure and Applied Chemistry; 2006. Online version 3.0.1, 2019. 10.1351/goldbook.C01093&quot;, &#39;license&#39;: &#39;The IUPAC Gold Book is licensed under Creative Commons Attribution-ShareAlike CC BY-SA 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/) for individual terms.&#39;, &#39;collection&#39;: &#39;If you are interested in licensing the Gold Book for commercial use, please contact the IUPAC Executive Director at executivedirector@iupac.org .&#39;, &#39;disclaimer&#39;: &#39;The International Union of Pure and Applied Chemistry (IUPAC) is continuously reviewing and, where needed, updating terms in the Compendium of Chemical Terminology (the IUPAC Gold Book). Users of these terms are encouraged to include the version of a term with its use and to check regularly for updates to term definitions that you are using.&#39;, &#39;accessed&#39;: &#39;2023-11-30T15:04:02+00:00&#39;}}
 </pre></div>
 </div>
 </div>
@@ -644,20 +643,20 @@ Stereoisomeric olefins or cycloalkanes (or hetero-analogues) which differ in the
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="rec_dataset_search.html"
+       href="rec_computing_inchis.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Finding a Findable Dataset</p>
+        <p class="prev-next-title">Computing InChIs</p>
       </div>
     </a>
     <a class="right-next"
-       href="rec_iupac_pkadata.html"
+       href="rec_opsin_api.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Reuse of Curated Chemical Data</p>
+        <p class="prev-next-title">Using the OPSIN API in Python</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

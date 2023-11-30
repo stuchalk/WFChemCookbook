@@ -158,6 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../cooking.html">The Joy of Cooking</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../techniques.html">Cooking Techniques</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../techniques/tec_dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../techniques/tec_sharing_chemdata.html">Preparing Chemical Data for FAIR Sharing - A Minimalist Approach</a></li>
 </ul>
 </li>
@@ -177,15 +178,13 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../recipes.html">Data Recipes</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../recipes/rec_computing_inchis.html">Computing InChIs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../recipes/rec_dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../recipes/rec_goldbook_api.html">Accessing the IUPAC Gold Book API in Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../recipes/rec_iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../recipes/rec_opsin_api.html">Using the OPSIN API in Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../recipes/rec_uvvis_metadata.html">Structured UV/Vis (meta)data for small molecule characterisation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../menus.html">FAIR Menus</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../menus/men_pkadata_extraction.html">Extracting dissocation constants from compiled reference works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menus/men_iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../school.html">Culinary School</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -472,9 +471,9 @@ to know what data you are working with, and how best to important it accurately.
 (.xxx) that you are working with. While many files are text files they can have extension which dictates what type of
 format the file is, and/or which type of software can open it.  Some common text file formats are:</p>
 <ul class="simple">
-<li><p>‘.txt’ : this is your basic text file which can be read by a general text editor such as; ‘textedit’ (MacOS),
-‘Notepad’ (Windows), ‘textmate’ (<a class="reference external" href="https://macromates.com/">MacOS</a>), ‘Sublime Text’
-(<a class="reference external" href="https://www.sublimetext.com/">MacOS/Windows/Linux</a>)</p></li>
+<li><p>‘.txt’ : this is your basic text file which can be read by a general text editor such as; ‘textedit’ (macOS),
+‘Notepad’ (Windows), ‘textmate’ (<a class="reference external" href="https://macromates.com/">macOS</a>), ‘Sublime Text’
+(<a class="reference external" href="https://www.sublimetext.com/">macOS/Windows/Linux</a>)</p></li>
 <li><p>‘.csv’ : a text file that is specifically written to store data as ‘comma separated variables’.  This means that data
 is organized like a table.  Each row of the table is a line in the text file ends in a
 <a class="reference external" href="https://en.wikipedia.org/wiki/Newline">newline character</a>, which varies between different computer systems.  Then columns
@@ -520,7 +519,7 @@ system there may be some selections that won’t work on your computer.</p>
 <p>Figure 1
 <img alt="fig1" src="../_images/sch_excel_import_fig1.jpg" />
 Caption: The Excel import dialog (a) and the options for ‘File origin’ (b)</p>
-<p>Using the open file dialog is important if your text file contains unicode (e.g., UTF-8).  If you double click on a .csv,
+<p>Using the open file dialog is important if your text file contains unicode (e.g., UTF-8).  If you double-click on a .csv,
 .tsv, or other file with an extension that Excel automatically recognizes, the file will be opened without giving you
 the option to choose UTF-8 as the encoding format.  This results in ‘weird characters’ (technical term ;) ) showing up in your
 imported file (see Figure 2a).  However, if you change the extension of such a file to ‘.txt’ and then open it from within
@@ -537,7 +536,7 @@ This can result in extra blank lines begin added by Excel to the imported file w
 CR character, and a ‘line-feed’ LF character is at the end of line.</p>
 <p>Figure 3
 <img alt="fig3" src="../_images/sch_excel_import_fig3.jpg" />
-Caption: Different end-of-line character options fro a text file.</p>
+Caption: Different end-of-line character options from a text file.</p>
 </section>
 <section id="data-types-in-excel">
 <h3>2.3 Data types in Excel<a class="headerlink" href="#data-types-in-excel" title="Permalink to this headline">#</a></h3>

@@ -37,9 +37,9 @@ However, there are situations where importing isn't easy, or worse where importe
 to know what data you are working with, and how best to important it accurately. First, you need to check the extension
 (.xxx) that you are working with. While many files are text files they can have extension which dictates what type of
 format the file is, and/or which type of software can open it.  Some common text file formats are:
-- '.txt' : this is your basic text file which can be read by a general text editor such as; 'textedit' (MacOS), 
-  'Notepad' (Windows), 'textmate' ([MacOS](https://macromates.com/)), 'Sublime Text' 
-  ([MacOS/Windows/Linux](https://www.sublimetext.com/))
+- '.txt' : this is your basic text file which can be read by a general text editor such as; 'textedit' (macOS), 
+  'Notepad' (Windows), 'textmate' ([macOS](https://macromates.com/)), 'Sublime Text' 
+  ([macOS/Windows/Linux](https://www.sublimetext.com/))
 - '.csv' : a text file that is specifically written to store data as 'comma separated variables'.  This means that data 
   is organized like a table.  Each row of the table is a line in the text file ends in a
   [newline character](https://en.wikipedia.org/wiki/Newline), which varies between different computer systems.  Then columns
@@ -86,7 +86,7 @@ Figure 1
 ![fig1](../images/sch_excel_import_fig1.jpg)
 Caption: The Excel import dialog (a) and the options for 'File origin' (b)
 
-Using the open file dialog is important if your text file contains unicode (e.g., UTF-8).  If you double click on a .csv,
+Using the open file dialog is important if your text file contains unicode (e.g., UTF-8).  If you double-click on a .csv,
 .tsv, or other file with an extension that Excel automatically recognizes, the file will be opened without giving you 
 the option to choose UTF-8 as the encoding format.  This results in 'weird characters' (technical term ;) ) showing up in your 
 imported file (see Figure 2a).  However, if you change the extension of such a file to '.txt' and then open it from within
@@ -104,7 +104,7 @@ CR character, and a 'line-feed' LF character is at the end of line.
 
 Figure 3
 ![fig3](../images/sch_excel_import_fig3.jpg)
-Caption: Different end-of-line character options fro a text file. 
+Caption: Different end-of-line character options from a text file. 
 
 ### 2.3 Data types in Excel
 During the import of a text file, via the open dialog, you are presented with other choices as you work through importing 

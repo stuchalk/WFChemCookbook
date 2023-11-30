@@ -158,6 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../cooking.html">The Joy of Cooking</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../techniques.html">Cooking Techniques</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../techniques/tec_dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../techniques/tec_sharing_chemdata.html">Preparing Chemical Data for FAIR Sharing - A Minimalist Approach</a></li>
 </ul>
 </li>
@@ -177,15 +178,13 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../recipes.html">Data Recipes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="rec_computing_inchis.html">Computing InChIs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rec_dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rec_goldbook_api.html">Accessing the IUPAC Gold Book API in Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rec_iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rec_opsin_api.html">Using the OPSIN API in Python</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Structured UV/Vis (meta)data for small molecule characterisation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../menus.html">FAIR Menus</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../menus/men_pkadata_extraction.html">Extracting dissocation constants from compiled reference works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menus/men_iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -680,11 +679,11 @@ Markdown (.ipynb)
 </section>
 <section id="what-is-jupyter-a-jupyter-notebook">
 <h4>What is Jupyter/a Jupyter Notebook?<a class="headerlink" href="#what-is-jupyter-a-jupyter-notebook" title="Permalink to this headline">#</a></h4>
-<p>Jupyter (formerly IPython Notebook) is an open-source project that lets you easily combine markdown text and executable Python source code on one canvas called a notebook. They are both human readable documents containing the analysis description and the results (figures, tables, etc..) as well as executable documents which run the code to perform the data analysis.</p>
+<p>Jupyter (formerly IPython Notebook) is an open-source project that lets you easily combine MarkDown text and executable Python source code on one canvas called a notebook. They are both human-readable documents containing the analysis description and the results (figures, tables, etc.) as well as executable documents which run the code to perform the data analysis.</p>
 </section>
 <section id="what-is-anaconda">
 <h4>What is Anaconda?<a class="headerlink" href="#what-is-anaconda" title="Permalink to this headline">#</a></h4>
-<p>Anaconda can be thought of as a one stop shop for all things Python and data science. It’s almost an umbrella; by downloading Anaconda you also get Python, Jupyter notebooks and a whole host of other useful programmes. It is also a package manager and virtual environment manager.</p>
+<p>Anaconda can be thought of as a one-stop shop for all things Python and data science. It’s almost an umbrella; by downloading Anaconda you also get Python, Jupyter notebooks and a whole host of other useful programmes. It is also a package manager and virtual environment manager.</p>
 </section>
 <section id="installing-the-tools">
 <h4>Installing the tools<a class="headerlink" href="#installing-the-tools" title="Permalink to this headline">#</a></h4>
@@ -710,7 +709,8 @@ Markdown (.ipynb)
 <p>First the packages we need are imported into the Jupyter notebook</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jcamp</span> <span class="kn">import</span> <span class="n">jcamp_read</span>              <span class="c1"># Importing the jcamp_read() method from the jcamp package</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># noinspection PyProtectedMember</span>
+<span class="kn">from</span> <span class="nn">jcamp</span> <span class="kn">import</span> <span class="n">jcamp_read</span>              <span class="c1"># Importing the jcamp_read() method from the jcamp package</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>           <span class="c1"># Importing a plotting package</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                        <span class="c1"># Import the numerical python package for mathematical operations</span>
 </pre></div>
@@ -801,14 +801,14 @@ with descriptive and informative names) that will hold the data associated with 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9217aafdded0a261d937220c6d757a6973a008c74c5d55fe362df59516594726.png" src="../_images/9217aafdded0a261d937220c6d757a6973a008c74c5d55fe362df59516594726.png" />
+<img alt="../_images/4f616e31310bb0f47387d9c899ef324593fd6003808614026e48b3e7a903e267.png" src="../_images/4f616e31310bb0f47387d9c899ef324593fd6003808614026e48b3e7a903e267.png" />
 </div>
 </div>
-<p>The plot has also be saved as an image.</p>
+<p>The plot has also been saved as an image.</p>
 <p>In this example, for reporting of the molar extinction coefficient (ε) corresponding to λ<sub>max</sub> we must first take the antilog</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epsilon_array</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="n">log_epsilon</span> <span class="c1"># Create an nd array and assign the antilog of log_epsilon </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epsilon_array</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="n">log_epsilon</span> <span class="c1"># Create an array and assign the antilog of log_epsilon </span>
                                 <span class="c1"># using numpys exp (exponential) method</span>
 
 <span class="n">arg_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">epsilon_array</span><span class="p">)</span> <span class="c1"># Use numpys arg max function to find the index of the largest y value</span>
@@ -830,7 +830,8 @@ with descriptive and informative names) that will hold the data associated with 
 <p>Now we create a function to apply the Beer Lambert law to convert Absorbance (A) to Absorptivity (ε) followed by a line of code to run the function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">beer_lambert</span><span class="p">(</span><span class="n">absorbance</span><span class="p">,</span> <span class="n">concentration</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># noinspection PyShadowingNames</span>
+<span class="k">def</span> <span class="nf">beer_lambert</span><span class="p">(</span><span class="n">absorbance</span><span class="p">,</span> <span class="n">concentration</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Doc String</span>
 <span class="sd">    ----------</span>
@@ -863,7 +864,7 @@ with descriptive and informative names) that will hold the data associated with 
 <span class="n">concentration</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># Edit to your own value</span>
 <span class="n">length</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># Edit to your own value</span>
 
-<span class="n">epsilon</span> <span class="o">=</span> <span class="n">beer_lambert</span><span class="p">(</span><span class="n">absorbance</span><span class="p">,</span> <span class="n">concentration</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span> <span class="c1"># Replace each of the parameters absorbance, </span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="n">beer_lambert</span><span class="p">(</span><span class="n">absorbance</span><span class="p">,</span> <span class="n">concentration</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span> <span class="c1"># Replace each of the parameters, absorbance, </span>
                                                           <span class="c1"># concentration and length with your own numbers.</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The molar absorptivity (ε) is: </span><span class="si">{</span><span class="n">epsilon</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> L mol-1 cm-1&#39;</span><span class="p">)</span>
@@ -890,7 +891,7 @@ with descriptive and informative names) that will hold the data associated with 
 </section>
 <section id="method">
 <h3>Method<a class="headerlink" href="#method" title="Permalink to this headline">#</a></h3>
-<p>A method is a function that is associated with an object. It is defined inside a class, and it can access and manipulate the attributes and state of the object it is associated with. Methods contain functionality that is often useful for the work you are doing e.g def for beer_lambert in the exemplar code above (section 4)</p>
+<p>A method is a function that is associated with an object. It is defined inside a class, and it can access and manipulate the attributes and state of the object it is associated with. Methods contain functionality that is often useful for the work you are doing, e.g. def for beer_lambert in the exemplar code above (section 4)</p>
 </section>
 <section id="data-structure">
 <h3>Data Structure<a class="headerlink" href="#data-structure" title="Permalink to this headline">#</a></h3>

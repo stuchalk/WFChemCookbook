@@ -158,6 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../cooking.html">The Joy of Cooking</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../techniques.html">Cooking Techniques</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../techniques/tec_dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../techniques/tec_sharing_chemdata.html">Preparing Chemical Data for FAIR Sharing - A Minimalist Approach</a></li>
 </ul>
 </li>
@@ -177,15 +178,13 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../recipes.html">Data Recipes</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../recipes/rec_computing_inchis.html">Computing InChIs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../recipes/rec_dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../recipes/rec_goldbook_api.html">Accessing the IUPAC Gold Book API in Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../recipes/rec_iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../recipes/rec_opsin_api.html">Using the OPSIN API in Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../recipes/rec_uvvis_metadata.html">Structured UV/Vis (meta)data for small molecule characterisation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../menus.html">FAIR Menus</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../menus/men_pkadata_extraction.html">Extracting dissocation constants from compiled reference works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menus/men_iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -440,9 +439,9 @@ as long as you have enough information to come up with a legitimate IUPAC name f
 <p>OPSIN (Open Parser for Systematic IUPAC Nomenclature) is a relatively simple website where you can enter the IUPAC name
 for a compound and retrieve many common identifiers for the structure.  OPSIN has been around in its current form since
 2009 and was developed by Daniel Lowe as part of his PhD.  Daniel has supported the site since then and continues to
-add updates as he can based on user issues/requests.</p>
+add updates as he can, based on user issues/requests.</p>
 <p>OPSIN can be used by humans via the homepage where a single input box allows you to enter a valid IUPAC name (see figure below).  If you
-dont have an IUPAC name, and you dont have time to learn all the naming rules, the site will return an error with
+don’t have an IUPAC name, and you don’t have time to learn all the naming rules, the site will return an error with
 information that the algorithm could not interpret.  While this might seem like a big negative for the site, it can
 be used to fix mispelling of systematic names amd it is really useful as a teaching tool where you give students a
 structure and ask them to name it, checking the names with OPSIN.  For data science OPSIN also has an <a class="reference external" href="https://opsin.ch.cam.ac.uk/instructions.html">API</a> and returns

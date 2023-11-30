@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Finding a Findable Dataset" href="rec_dataset_search.html" />
+    <link rel="next" title="Accessing the IUPAC Gold Book API in Python" href="rec_goldbook_api.html" />
     <link rel="prev" title="Workflows for accessing or publishing FAIR Chemical Data" href="../recipes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -158,6 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../cooking.html">The Joy of Cooking</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../techniques.html">Cooking Techniques</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../techniques/tec_dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../techniques/tec_sharing_chemdata.html">Preparing Chemical Data for FAIR Sharing - A Minimalist Approach</a></li>
 </ul>
 </li>
@@ -177,15 +178,13 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../recipes.html">Data Recipes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Computing InChIs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rec_dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rec_goldbook_api.html">Accessing the IUPAC Gold Book API in Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rec_iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rec_opsin_api.html">Using the OPSIN API in Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rec_uvvis_metadata.html">Structured UV/Vis (meta)data for small molecule characterisation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../menus.html">FAIR Menus</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../menus/men_pkadata_extraction.html">Extracting dissocation constants from compiled reference works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menus/men_iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -538,7 +537,7 @@ About this interactive <img alt="icons" src="../_images/rocket1.png" /> recipe<d
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;rdkit.Chem.rdchem.Mol object at 0x11113ab20&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;rdkit.Chem.rdchem.Mol object at 0x120d78580&gt;
 </pre></div>
 </div>
 </div>
@@ -619,7 +618,7 @@ About this interactive <img alt="icons" src="../_images/rocket1.png" /> recipe<d
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;rdkit.Chem.rdchem.Mol object at 0x11113b060&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x11113aff0&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x11113b0d0&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x11113b4c0&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x11113b530&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x11113b5a0&gt;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;rdkit.Chem.rdchem.Mol object at 0x120d78b30&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x120d78ba0&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x120d79000&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x120d79070&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x120d790e0&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x120d79150&gt;]
 </pre></div>
 </div>
 </div>
@@ -778,7 +777,7 @@ About this interactive <img alt="icons" src="../_images/rocket1.png" /> recipe<d
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;openbabel.pybel.Molecule object at 0x11df5db10&gt;, &lt;openbabel.pybel.Molecule object at 0x11df5dab0&gt;, &lt;openbabel.pybel.Molecule object at 0x11df5dff0&gt;, &lt;openbabel.pybel.Molecule object at 0x11df5e530&gt;, &lt;openbabel.pybel.Molecule object at 0x11df5dc30&gt;, &lt;openbabel.pybel.Molecule object at 0x11df5dc00&gt;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;openbabel.pybel.Molecule object at 0x1218f9750&gt;, &lt;openbabel.pybel.Molecule object at 0x1218f8d50&gt;, &lt;openbabel.pybel.Molecule object at 0x1218f8a90&gt;, &lt;openbabel.pybel.Molecule object at 0x1218f8a10&gt;, &lt;openbabel.pybel.Molecule object at 0x1218f8950&gt;, &lt;openbabel.pybel.Molecule object at 0x1218f8890&gt;]
 </pre></div>
 </div>
 </div>
@@ -849,11 +848,11 @@ About this interactive <img alt="icons" src="../_images/rocket1.png" /> recipe<d
       </div>
     </a>
     <a class="right-next"
-       href="rec_dataset_search.html"
+       href="rec_goldbook_api.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Finding a Findable Dataset</p>
+        <p class="prev-next-title">Accessing the IUPAC Gold Book API in Python</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
