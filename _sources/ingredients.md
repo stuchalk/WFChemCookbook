@@ -6,3 +6,10 @@ Guidance for FAIR chemical data and other community resources, including the
 [NDFI4Chem Knowledgebase](https://knowledgebase.nfdi4chem.de/knowledge_base/) and the 
 [ELIXIR FAIR Cookbook](https://faircookbook.elixir-europe.org/).  In addition, efforts to inform best practice, 
 like the [IUPAC FAIR Spec Project](https://iupac.org/project/2019-031-1-024/), are highlighted.
+
+[//]: # (subpages)
+## Resources in this section
+- [Data Repository: PubChem](ingredients/ing_pubchem.md)
+- [PubChem PUG-REST API](ingredients/ing_pubchem_pugrest.md)
+- [Repository: figshare](ingredients/ing_figshare.md)
+- [Repository: zenodo](ingredients/ing_zenodo.md)

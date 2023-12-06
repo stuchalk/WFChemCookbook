@@ -1,3 +1,0 @@
-# Extracting dissocation constants from compiled reference works
-
-Add more content...
