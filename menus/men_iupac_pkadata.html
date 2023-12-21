@@ -423,7 +423,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -439,6 +441,27 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-iupac-dissociation-constant-dataset">The IUPAC Dissociation Constant Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#original-source-documents">Original Source Documents</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-the-data">Extracting the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-quality-assurance">Data Quality Assurance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#describing-the-dataset">Describing the Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-the-dataset-available">Making the Dataset Available</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sharing-the-research-process">Sharing the Research Process</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#announcing-the-availability-of-the-dataset">Announcing the Availability of the Dataset</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reusing-the-iupac-dissociation-constant-dataset">Reusing The IUPAC Dissociation Constant Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-the">Extracting the</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -450,8 +473,108 @@ document.write(`
                   
   <section id="reuse-of-curated-chemical-data">
 <h1>Reuse of Curated Chemical Data<a class="headerlink" href="#reuse-of-curated-chemical-data" title="Permalink to this headline">#</a></h1>
-<p>One of the advantages of FAIR data is that researchers are now making data more available and in simplier, usable formats than ever before.  Subsequently, as the chemistry community sees more data becoming available there will start to be an expectation that researchers will make their data available. This then enables reuse of the data and may provide insights that otherwise might never be found (especially in large aggregated sets).</p>
-<p>This recipe would describe the reuse of the IUPAC pKa/pKb dataset found at <a class="reference internal" href="../menus.html"><span class="doc std std-doc">https://github.com/IUPAC/Dissociation-Constants</span></a>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+About this interactive <img alt="icons" src="../_images/rocket.png" /> recipe<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Author(s): <a class="reference external" href="https://orcid.org/0000-0002-0703-7776">Stuart Chalk</a></p></li>
+<li><p class="sd-card-text">Reviewer(s):</p></li>
+<li><p class="sd-card-text">Topic(s): Data reuse,</p></li>
+<li><p class="sd-card-text">Format(s): Interactive Jupyter Notebook (Python)</p></li>
+<li><p class="sd-card-text">Scenario(s): How can I work with open data to reuse it in my research</p></li>
+<li><p class="sd-card-text">Skill(s): You should be familiar with</p>
+<ul>
+<li><p class="sd-card-text"><a class="reference external" href="https://docs.github.com/en/get-started/quickstart/hello-world">GitHub</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://b-greve.gitbook.io/beginners-guide-to-clean-data/common-csv-problems">CSV Files</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://docs.djangoproject.com/en/5.0/">Django Framework (Python)</a></p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">Learning outcomes: After completing this example you should understand:</p>
+<ul>
+<li><p class="sd-card-text">How to judge the quality of open data</p></li>
+<li><p class="sd-card-text">How to work with CSV files to import data into Python</p></li>
+<li><p class="sd-card-text">How to save data in a database</p></li>
+<li><p class="sd-card-text">How to use the Django web framework to create a data website</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">Citation: ‘Reuse of Curated Chemical Data’, The IUPAC FAIR Chemistry Cookbook,</p></li>
+<li><p class="sd-card-text">Reuse: This notebook is made available under a <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a> license.</p></li>
+</ul>
+</div>
+</details><p>One of the advantages of FAIR data is that researchers are now making data more available, and in simplier, usable formats than ever before.<br />
+Subsequently, as the chemistry community sees more data becoming available there will start to be an expectation that researchers will make their data
+available. This then enables reuse of the data and may provide insights that otherwise might never be found (especially in large aggregated sets).</p>
+<p>This menu (multistep workflow) is presented in two sections.  The first describes the creation of the IUPAC Dissociation Constant (IDC) dataset found at
+<a class="github reference external" href="https://github.com/IUPAC/Dissociation-Constants">IUPAC/Dissociation-Constants</a>.  The second takes the data found in the IDC dataset
+and resuses it to create a data website using the Django (Python) web framework.  The idea is to show what it took to create and publish the IDC and
+subsequently what can be done with the data to reuse it.</p>
+<section id="the-iupac-dissociation-constant-dataset">
+<h2>The IUPAC Dissociation Constant Dataset<a class="headerlink" href="#the-iupac-dissociation-constant-dataset" title="Permalink to this headline">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The description of how the IDC was created is taken from the excellent discussion that Jonathan Zheng, the data creator, on the readme page of the
+repository where the data is available.  This author greatly appreciates the detail that is provided in the readme.  Also, thanks to Ye Li at MIT who
+provided information about the timeframe and workflow of the project.</p>
+</div>
+<p>The IUPAC Dissociation Constant (IDC) dataset was initiated as a project when <a class="reference external" href="https://greengroup.mit.edu/jonathan-zheng">Jonathan Zheng</a>
+a graduate student in chemical engineering at MIT contacted <a class="reference external" href="https://libguides.mit.edu/profiles/yel">Ye Li</a> an MIT librarian and past chair of the American Chemical Society (ACS) <a class="reference external" href="https://www.acscinf.org/">Division of Chemical Information</a>.  Subsequently, <a class="reference external" href="https://iupac.org/member/leah-r-mcewen/">Leah McEwen</a>, Chair of the IUPAC Committee on Publications and Cheminformatics Data Standards (<a class="reference external" href="https://iupac.org/body/024/">CPCDS</a>) was brought in to give guidance from the IUPAC perspective.</p>
+<section id="original-source-documents">
+<h3>Original Source Documents<a class="headerlink" href="#original-source-documents" title="Permalink to this headline">#</a></h3>
+<p>In the 1960’s IUPAC started to publish compilations of chemical data which eventually led to the development of the “<a class="reference external" href="https://doi.org/10.1351/pac197749010125">IUPAC Chemical Data Series</a>”.<br />
+Some of these volumes contain acid and base dissociation constant data and as a result became of interest to Jonathan Zheng as part of his Ph.D.
+Jonathan received permission from IUPAC to digitize three volumes (below) in December 2021, and less than a year later the aggregated dataset was made
+available on <a class="reference external" href="https://github.com/IUPAC/Dissociation-Constants">GitHub</a>.</p>
+<ul class="simple">
+<li><p>IUPAC, D.D. Perrin. Dissociation Constants of Organic Bases in Aqueous Solution; Butterworths, 1965; ISBN: 9780408891714</p></li>
+<li><p>IUPAC, D.D. Perrin. Dissociation Constants of Organic Bases in Aqueous Solution, Supplement; Butterworths, 1972; ISBN 9780408704083</p></li>
+<li><p>IUPAC, E.P. Serjeant, B. Dempsey. Ionisation Constants of Organic Acids in Aqueous Solution; Oxford/Pergamon, 1979 (v23, IUPAC Chemical Data Series); ISBN: 9780080223391</p></li>
+</ul>
+</section>
+<section id="extracting-the-data">
+<h3>Extracting the Data<a class="headerlink" href="#extracting-the-data" title="Permalink to this headline">#</a></h3>
+<p>With manual extraction of the dissociation constant data being impractical, Jonathan turned to the trusted technology of optical character recognition
+(<a class="reference external" href="https://en.wikipedia.org/wiki/Optical_character_recognition">OCR</a>). Jonathan used the paid Amazon Web Services (AWS) <a class="reference external" href="https://aws.amazon.com/pm/textract/">Textract</a> platform to convert the scanned pages into text and subsequently data tables, and addition data process was done in Python using unpaper, OCRmyPDF, camelot, tabula. Note: If users do not have access to AWS Textract, there are a number of <a class="reference external" href="https://en.wikipedia.org/wiki/Comparison_of_optical_character_recognition_software">OCR software packages/services</a> including the well regarded free <a class="reference external" href="https://github.com/tesseract-ocr/tesseract">Tessaract</a> software that can easily be used in Python using the <a class="reference external" href="https://github.com/madmaze/pytesseract">pytessaract</a> package.</p>
+<p>Chemaxon <a class="reference external" href="https://docs.chemaxon.com/display/docs/molconvert.md">Molconvert</a> was used to translate names of chemical substances into chemical structures, a very important step to provide an accurate dataset.  In addition, IUPAC name to SMILES translation was aided by <a class="reference external" href="https://opsin.ch.cam.ac.uk">OPSIN</a>, <a class="reference external" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>, and the <a class="reference external" href="https://cactus.nci.nih.gov/chemical/structure">Chemical Identifier Resolver</a>. More details can be found <a class="reference external" href="https://github.com/IUPAC/Dissociation-Constants#methodological-information">here</a>.</p>
+</section>
+<section id="data-quality-assurance">
+<h3>Data Quality Assurance<a class="headerlink" href="#data-quality-assurance" title="Permalink to this headline">#</a></h3>
+<p>If automation (via web services or programming languages) is used to process data, it is important to create a set of quality control criteria that can be implemented using scripts to apply common sense chemical criteria and boundaries to a detect inconsistencies in data.  This is especially needed when the data formats (data models) of the sources are not the same (as in the case).  Criteria general revolve around making specific columns of data ‘normalized’, that is self-consistent as far as possible. This might involve checking for the prescence/absence of specific characters, identifying values in numeric columns that are not written as numbers, cleaning chemical names and normalization to the IUPAC name (or the InChI/InchIKey), or checking for a specific format of data in a column.  Many if not all of these criteria can be implemented using the <a class="reference external" href="https://www.regular-expressions.info/">regular expression (regex)</a> functionality but into all programming languages.  Learning regex is an important part of doing data science and producing high quality data, and great way to work with your data is to develop regex string using the <a class="reference external" href="https://regex101.com/">https://regex101.com/</a> website. The QA that was done in this work is described <a class="reference external" href="https://github.com/IUPAC/Dissociation-Constants#quality-assurance">here</a>.</p>
+</section>
+<section id="describing-the-dataset">
+<h3>Describing the Dataset<a class="headerlink" href="#describing-the-dataset" title="Permalink to this headline">#</a></h3>
+<p>When deciding to make a dataset available to the community one area that must be addressed is how you are going to provide documentation about the data so that users can understand it (and subsequently reuse it).  This is best done by describing each column of data in terms of what the data is (and is not), what datatype it is (strings, numbers, dates, etc…), its cardinality, are values from a controlled vocabulary (e.g. enumerated list) or free form, are the entries unique ids, and are there any range limitations. In addition, if there are errors with the data they should be captured in a separate column, and if the values could have different units, a separate unit column is needed.  There is a detailed description of the fields of this dataset <a class="reference external" href="https://github.com/IUPAC/Dissociation-Constants#data-specific-information">here</a>.</p>
+</section>
+<section id="making-the-dataset-available">
+<h3>Making the Dataset Available<a class="headerlink" href="#making-the-dataset-available" title="Permalink to this headline">#</a></h3>
+<p>Although GitHub is more known for being a code repository platform (built for the git version control software), there is growing use of
+GitHub for using the collaborative open platform for data science, as any files can be version controlled and annotation of a repositories
+content can be easily added using <a class="reference external" href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Markdown</a> files.  In addition, inclusion of Jupyter Notebooks (as this file is) allows readers to see how code works right in a browser (see the next section for examples).  All of these features made it the obvious choice for making the IDC dataset openly available to the research community.</p>
+</section>
+<section id="sharing-the-research-process">
+<h3>Sharing the Research Process<a class="headerlink" href="#sharing-the-research-process" title="Permalink to this headline">#</a></h3>
+<p>In the context of FAIR and research data it is one thing to make data available for the community to reuse, but it is another to show how you did all or part(s) of the research by making available code that you may have developed in your project.  This has now become much easier with the development of <a class="reference external" href="https://realpython.com/jupyter-notebook-introduction/">Juypter notebooks</a> that allow you to run Python code in a web browser.  Sharing one or more Jupyter Notebook (.ipynb file) can thus allow the research community to run code that was used in a project to see how things were done.  This not only enables other researchers to run the same workflow, but also allows communities to collarboratively develop worflows for community use thus improving the reproducility of research data. Jonathan has made three Jupyter notebooks available in the IDC repository here, and you can click on the ‘Binder’ button on the page to launch the notebooks in your browser in the <a class="reference external" href="https://mybinder.org">Binder service</a> and run the code within.</p>
+</section>
+<section id="announcing-the-availability-of-the-dataset">
+<h3>Announcing the Availability of the Dataset<a class="headerlink" href="#announcing-the-availability-of-the-dataset" title="Permalink to this headline">#</a></h3>
+<p>Its one thing to create a repository on GitHub and another to get the word out about where it is and what it contains.  Just like publishing a paper, it is important to think about how you are going to make it findable (the F in FAIR).  For data, just like a paper, it is a good idea to get a DOI.  As the data is on GitHub this can easily be done through GitHubs <a class="reference external" href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content">Zenodo integration</a>.  The DOI that is created is provided by <a class="reference external" href="http://datacite.org/">DataCite</a> a DOI authority focusing on code and data resources.  This integration makes it easy to add a button to the readme of the repository (code is available to the owner, on Zenodo) that links to content on Zenodo, and conveniently you can automatically create a new DOI for each version you publish on your repository. Of course, it doesn’t hurt to then write a paper about your data/code (<a class="reference external" href="https://doi.org/10.1515/ci-2023-0310">FAIR datasets for acid dissociation constants</a>) and the DOI’s can be linked together as they refer to the same resource.</p>
+<p>Additionally, there are resources available where datasets can be indexed which further improves discoverability and the IDC has been added to a couple of the most important.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://datasetsearch.research.google.com/">Google Dataset Search</a> which indexes datasets available on the Internet by harvesting <a class="reference external" href="https://developers.google.com/search/docs/appearance/structured-data/dataset">specific metadata</a>.  This metadata is at the bottom of the <a class="reference external" href="https://github.com/IUPAC/Dissociation-Constants#dataset-metadata">readme file</a> for the IDC repository. [<a class="reference external" href="https://datasetsearch.research.google.com/search?docid=L2cvMTF0d3NuZjkyaA%3D%3D">IDC Entry</a>]</p></li>
+<li><p><a class="reference external" href="https://fairsharing.org">FAIRSharing.org</a> which collects metadata about FAIR resources and provides search functionality to find resources in its database [<a class="reference internal" href="../menus.html"><span class="doc std std-doc">IDC Entry</span></a>]</p></li>
+</ul>
+</section>
+</section>
+<section id="reusing-the-iupac-dissociation-constant-dataset">
+<h2>Reusing The IUPAC Dissociation Constant Dataset<a class="headerlink" href="#reusing-the-iupac-dissociation-constant-dataset" title="Permalink to this headline">#</a></h2>
+<p>The idea of making research data available is that it can and will get reused by the community.  As has been discussed above, researchers that find research data available will need to have a lot of information about the data, so they can understand it can be integrated with other data they (or others) have.  This section describes the scenario where the IDC dataset is reused to create a website where users can search for the data based on chemical substance, experimental conditions (e.g. temperature or ionic strength), or research paper and obtain the data in other open formats like XML or JSON.</p>
+<section id="extracting-the">
+<h3>Extracting the<a class="headerlink" href="#extracting-the" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -512,6 +635,33 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-iupac-dissociation-constant-dataset">The IUPAC Dissociation Constant Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#original-source-documents">Original Source Documents</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-the-data">Extracting the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-quality-assurance">Data Quality Assurance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#describing-the-dataset">Describing the Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-the-dataset-available">Making the Dataset Available</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sharing-the-research-process">Sharing the Research Process</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#announcing-the-availability-of-the-dataset">Announcing the Availability of the Dataset</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reusing-the-iupac-dissociation-constant-dataset">Reusing The IUPAC Dissociation Constant Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-the">Extracting the</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
