@@ -188,7 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../menus.html">FAIR Menus</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../menus/men_iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menus/iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../school.html">Culinary School</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -505,7 +505,7 @@ PubChem provides multiple programmatic access routes: Power User Gateway (PUG), 
 <li><p>output : specifies the output format (e.g., TXT, CSV, PNG, XML, JSON, SDF)</p></li>
 <li><p>option : optional parameters specific to some operations.  These parameters are specified as URL parameters after the “?” character.</p></li>
 </ul>
-<p><img alt="PUG-REST URL syntax" src="../_images/ing_pubchem_pugrest_fig1.jpg" /></p>
+<p><img alt="PUG-REST URL syntax" src="images/ing_pubchem_pugrest_fig1.jpg" /></p>
 <p>The following example shows how to formulate a four-component PUG-REST Request URL to get the molecular formula of PubChem Compound ID (CID) 2244 in TXT.  CID 2244 corresponds to asprin and you can access its <a class="reference external" href="https://pubchem.ncbi.nlm.nih.gov/compound/2244">Compound Summary page</a>.  You can also get to this page from the <a class="reference external" href="https://pubchem.ncbi.nlm.nih.gov">PubChem homepage</a> by searching for “aspirin” or “CID2244”.  For more information, see the “<span class="xref myst">Repository: PubChem</span>” page.</p>
 <section id="import-the-python-packages-needed-to-run-this-code">
 <h3>1. Import the Python packages needed to run this code<a class="headerlink" href="#import-the-python-packages-needed-to-run-this-code" title="Permalink to this headline">#</a></h3>
@@ -538,9 +538,7 @@ PubChem provides multiple programmatic access routes: Power User Gateway (PUG), 
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>REQEST URL: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/2244/property/MolecularFormula/txt
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OUTPUT    : C9H8O4
+OUTPUT    : C9H8O4
 </pre></div>
 </div>
 </div>
@@ -601,21 +599,15 @@ PubChem provides multiple programmatic access routes: Power User Gateway (PUG), 
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MolecularWeight  : 180.16
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HBondDonorCount  : 1
+HBondDonorCount  : 1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HBondAcceptorCoun: 4
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HeavyAtomCount   : 13
+HeavyAtomCount   : 13
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>XLogP            : 1.200
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TPSA             : 63.6
+TPSA             : 63.6
 </pre></div>
 </div>
 </div>

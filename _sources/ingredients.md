@@ -9,7 +9,7 @@ like the [IUPAC FAIR Spec Project](https://iupac.org/project/2019-031-1-024/), a
 
 [//]: # (subpages)
 ## Resources in this section
-- [Data Repository: PubChem](ingredients/ing_pubchem.md)
-- [PubChem PUG-REST API](ingredients/ing_pubchem_pugrest.md)
-- [Repository: figshare](ingredients/ing_figshare.md)
-- [Repository: zenodo](ingredients/ing_zenodo.md)
+- [Data Repository: PubChem](ingredients/pubchem)
+- [PubChem PUG-REST API](ingredients/pubchem_pugrest)
+- [Repository: figshare](ingredients/figshare)
+- [Repository: zenodo](ingredients/zenodo)
