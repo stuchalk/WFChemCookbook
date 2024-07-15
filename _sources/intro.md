@@ -1,23 +1,23 @@
-# Using the Cookbook
+# Welcome to the IUPAC FAIR Chemistry Cookbook
 
-The IUPAC FAIR Chemistry Cookbook is intended to be an open, collaborative, community focused resource on working with 
-FAIR data in chemistry. FAIR data are findable, accessible, interoperable, and reusable for machine processing 
-{cite:p}`Wilkinson2016`, the new paradigm for reporting research data. This cookbook aims to support best practices 
-using chemical data standards through practical, interactive tutorials, provided by the International Union of Pure 
-and Applied Chemistry (IUPAC) through the EU funded WorldFAIR project 
-(see [About this project](https://iupac.github.io/WFChemCookbook/about.html)). 
+Welcome to the IUPAC FAIR Chemistry Cookbook, a self-serve web-based toolbox of interactive demonstrations of community 
+best practices in machine-readable chemical data management. The Cookbook is an openly accessible collaborative resource 
+to exemplify the FAIR data principles and standards in cheminformatics and provide hands-on executable content for 
+experiential learning. It is designed to be an evolving resource for the chemistry community supported by IUPAC (the 
+International Union of Pure and Applied Chemistry) as part of the WorldFAIR Initiative (see About this project).
 
-## Recipes 
-- Many of the recipes on this site will take advantage of Juypter Notebooks to run Python code 
- in the browser for an interactive (and educational) feel for the user.
-- We have tried to provide useful information about each recipe in the collapsable 'header'
- that is below the title of the recipe.  We are hoping this provides users with some sense
- of the how, what and when a recipe might be useful.
-- As part of the header we have included bullets for skills and learning objectives but have also
- thought to add use cases.  If you have any ideas about how we should characterize recipes we would love to 
- hear them!
+Chemistry underlies both living and materials systems and chemical data are at the heart of data driven discovery and 
+innovation across the health and environmental science sectors and in many applied engineering fields. Chemical data 
+and analysis tools are increasingly available online and researchers and practitioners alike are increasingly involved 
+in new ways to analyze, visualize, mine, and integrate data and information. In a digital work environment, well-prepared 
+researchers need to be comfortable working their way around digital data formats, code, and online computing platforms. 
+Proficiency in basic digital data handling skills can empower chemists to exploit FAIR and open data resources and handle 
+real-world chemical data scenarios more effectively. 
 
-## Contributing to the Cookbook
-
-We welcome feedback & suggestions for additional content.  For ways to do this go to our [feedback page](feedback.md)!
-
+The IUPAC FAIR Chemistry Cookbook is focused on working with chemical data that are findable, accessible, interoperable, 
+and reusable for machine processing [Wil16]. Responsible data sharing and reuse begin with responsible data stewardship. 
+Familiarity with techniques for digitally representing chemical structures and other data components will allow 
+researchers to tap into multiple networked resources for searching and analysis, as well as enable their own data to be 
+more discoverable. Our goal is to get more practical tools & tips in the hands of practicing chemists and others 
+working with digital chemical data, to lower barriers and smooth the adoption of best practices for sharing and reusing 
+FAIR chemical data.
