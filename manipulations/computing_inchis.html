@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -537,330 +537,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.0.0 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel_launcher.py&quot;, line 18, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/traitlets/config/application.py&quot;, line 1075, in launch_instance
-    app.start()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelapp.py&quot;, line 739, in start
-    self.io_loop.start()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/tornado/platform/asyncio.py&quot;, line 205, in start
-    self.asyncio_loop.run_forever()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py&quot;, line 608, in run_forever
-    self._run_once()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py&quot;, line 1936, in _run_once
-    handle._run()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py&quot;, line 84, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 545, in dispatch_queue
-    await self.process_one()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 534, in process_one
-    await dispatch(*args)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 437, in dispatch_shell
-    await result
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/ipkernel.py&quot;, line 362, in execute_request
-    await super().execute_request(stream, ident, parent)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 778, in execute_request
-    reply_content = await reply_content
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/ipkernel.py&quot;, line 449, in do_execute
-    res = shell.run_cell(
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/zmqshell.py&quot;, line 549, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3075, in run_cell
-    result = self._run_cell(
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3130, in _run_cell
-    result = runner(coro)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/async_helpers.py&quot;, line 128, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3334, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3517, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3577, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;/var/folders/w6/j8jl8xqs5dz0wy7m7hgszkzsht526d/T/ipykernel_33582/3916824123.py&quot;, line 1, in &lt;module&gt;
-    from rdkit import Chem
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/rdkit/__init__.py&quot;, line 23, in &lt;module&gt;
-    from rdkit.Chem.Draw import IPythonConsole
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/rdkit/Chem/__init__.py&quot;, line 18, in &lt;module&gt;
-    from rdkit import DataStructs
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/rdkit/DataStructs/__init__.py&quot;, line 13, in &lt;module&gt;
-    from rdkit.DataStructs import cDataStructs
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.0.0 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel_launcher.py&quot;, line 18, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/traitlets/config/application.py&quot;, line 1075, in launch_instance
-    app.start()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelapp.py&quot;, line 739, in start
-    self.io_loop.start()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/tornado/platform/asyncio.py&quot;, line 205, in start
-    self.asyncio_loop.run_forever()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py&quot;, line 608, in run_forever
-    self._run_once()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py&quot;, line 1936, in _run_once
-    handle._run()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py&quot;, line 84, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 545, in dispatch_queue
-    await self.process_one()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 534, in process_one
-    await dispatch(*args)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 437, in dispatch_shell
-    await result
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/ipkernel.py&quot;, line 362, in execute_request
-    await super().execute_request(stream, ident, parent)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 778, in execute_request
-    reply_content = await reply_content
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/ipkernel.py&quot;, line 449, in do_execute
-    res = shell.run_cell(
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/zmqshell.py&quot;, line 549, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3075, in run_cell
-    result = self._run_cell(
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3130, in _run_cell
-    result = runner(coro)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/async_helpers.py&quot;, line 128, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3334, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3517, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3577, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;/var/folders/w6/j8jl8xqs5dz0wy7m7hgszkzsht526d/T/ipykernel_33582/3916824123.py&quot;, line 1, in &lt;module&gt;
-    from rdkit import Chem
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/rdkit/__init__.py&quot;, line 23, in &lt;module&gt;
-    from rdkit.Chem.Draw import IPythonConsole
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/rdkit/Chem/__init__.py&quot;, line 20, in &lt;module&gt;
-    from rdkit.Chem import rdchem
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.0.0 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel_launcher.py&quot;, line 18, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/traitlets/config/application.py&quot;, line 1075, in launch_instance
-    app.start()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelapp.py&quot;, line 739, in start
-    self.io_loop.start()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/tornado/platform/asyncio.py&quot;, line 205, in start
-    self.asyncio_loop.run_forever()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py&quot;, line 608, in run_forever
-    self._run_once()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py&quot;, line 1936, in _run_once
-    handle._run()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py&quot;, line 84, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 545, in dispatch_queue
-    await self.process_one()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 534, in process_one
-    await dispatch(*args)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 437, in dispatch_shell
-    await result
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/ipkernel.py&quot;, line 362, in execute_request
-    await super().execute_request(stream, ident, parent)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 778, in execute_request
-    reply_content = await reply_content
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/ipkernel.py&quot;, line 449, in do_execute
-    res = shell.run_cell(
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/zmqshell.py&quot;, line 549, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3075, in run_cell
-    result = self._run_cell(
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3130, in _run_cell
-    result = runner(coro)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/async_helpers.py&quot;, line 128, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3334, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3517, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3577, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;/var/folders/w6/j8jl8xqs5dz0wy7m7hgszkzsht526d/T/ipykernel_33582/3916824123.py&quot;, line 1, in &lt;module&gt;
-    from rdkit import Chem
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/rdkit/__init__.py&quot;, line 23, in &lt;module&gt;
-    from rdkit.Chem.Draw import IPythonConsole
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/rdkit/Chem/__init__.py&quot;, line 24, in &lt;module&gt;
-    from rdkit.Chem.rdmolops import *
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.0.0 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel_launcher.py&quot;, line 18, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/traitlets/config/application.py&quot;, line 1075, in launch_instance
-    app.start()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelapp.py&quot;, line 739, in start
-    self.io_loop.start()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/tornado/platform/asyncio.py&quot;, line 205, in start
-    self.asyncio_loop.run_forever()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py&quot;, line 608, in run_forever
-    self._run_once()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py&quot;, line 1936, in _run_once
-    handle._run()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py&quot;, line 84, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 545, in dispatch_queue
-    await self.process_one()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 534, in process_one
-    await dispatch(*args)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 437, in dispatch_shell
-    await result
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/ipkernel.py&quot;, line 362, in execute_request
-    await super().execute_request(stream, ident, parent)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 778, in execute_request
-    reply_content = await reply_content
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/ipkernel.py&quot;, line 449, in do_execute
-    res = shell.run_cell(
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/zmqshell.py&quot;, line 549, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3075, in run_cell
-    result = self._run_cell(
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3130, in _run_cell
-    result = runner(coro)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/async_helpers.py&quot;, line 128, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3334, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3517, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3577, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;/var/folders/w6/j8jl8xqs5dz0wy7m7hgszkzsht526d/T/ipykernel_33582/3916824123.py&quot;, line 1, in &lt;module&gt;
-    from rdkit import Chem
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/rdkit/__init__.py&quot;, line 23, in &lt;module&gt;
-    from rdkit.Chem.Draw import IPythonConsole
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/rdkit/Chem/Draw/__init__.py&quot;, line 20, in &lt;module&gt;
-    from rdkit.Chem import rdDepictor
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.0.0 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel_launcher.py&quot;, line 18, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/traitlets/config/application.py&quot;, line 1075, in launch_instance
-    app.start()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelapp.py&quot;, line 739, in start
-    self.io_loop.start()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/tornado/platform/asyncio.py&quot;, line 205, in start
-    self.asyncio_loop.run_forever()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py&quot;, line 608, in run_forever
-    self._run_once()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py&quot;, line 1936, in _run_once
-    handle._run()
-  File &quot;/opt/local/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py&quot;, line 84, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 545, in dispatch_queue
-    await self.process_one()
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 534, in process_one
-    await dispatch(*args)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 437, in dispatch_shell
-    await result
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/ipkernel.py&quot;, line 362, in execute_request
-    await super().execute_request(stream, ident, parent)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/kernelbase.py&quot;, line 778, in execute_request
-    reply_content = await reply_content
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/ipkernel.py&quot;, line 449, in do_execute
-    res = shell.run_cell(
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/ipykernel/zmqshell.py&quot;, line 549, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3075, in run_cell
-    result = self._run_cell(
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3130, in _run_cell
-    result = runner(coro)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/async_helpers.py&quot;, line 128, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3334, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3517, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/IPython/core/interactiveshell.py&quot;, line 3577, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;/var/folders/w6/j8jl8xqs5dz0wy7m7hgszkzsht526d/T/ipykernel_33582/3916824123.py&quot;, line 1, in &lt;module&gt;
-    from rdkit import Chem
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/rdkit/__init__.py&quot;, line 23, in &lt;module&gt;
-    from rdkit.Chem.Draw import IPythonConsole
-  File &quot;/Users/n00002621/.local/share/virtualenvs/WFChemCookbookFork-W_rMjG0V/lib/python3.11/site-packages/rdkit/Chem/Draw/__init__.py&quot;, line 21, in &lt;module&gt;
-    from rdkit.Chem.Draw import rdMolDraw2D
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="create-a-molecular-object-from-smiles">
@@ -874,7 +550,7 @@ Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/18fcfcaea1d0a56ab95abf88e64b2e3750ca78cb088e00e1aa4695ccc29ceec1.png" src="../_images/18fcfcaea1d0a56ab95abf88e64b2e3750ca78cb088e00e1aa4695ccc29ceec1.png" />
+<img alt="../_images/1216c49370e4d1961294b41a4c25ee1892c6b27c0baaba31508d2f086fca2417.png" src="../_images/1216c49370e4d1961294b41a4c25ee1892c6b27c0baaba31508d2f086fca2417.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -885,7 +561,7 @@ Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;rdkit.Chem.rdchem.Mol object at 0x10a751620&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;rdkit.Chem.rdchem.Mol object at 0x7fce540bfc30&gt;
 </pre></div>
 </div>
 </div>
@@ -966,7 +642,7 @@ Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;rdkit.Chem.rdchem.Mol object at 0x10a751b60&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x10a751bd0&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x10a752030&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x10a7520a0&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x10a752110&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x10a752180&gt;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;rdkit.Chem.rdchem.Mol object at 0x7fce1cf22960&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x7fce1cf229d0&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x7fce1cf22b20&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x7fce1cf22c00&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x7fce1cf22f80&gt;, &lt;rdkit.Chem.rdchem.Mol object at 0x7fce1cf22ff0&gt;]
 </pre></div>
 </div>
 </div>
@@ -980,7 +656,7 @@ Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/413483a68657f0010c06d89bc7be5f51faea67c6b33bbf73321275db7b632a45.png" src="../_images/413483a68657f0010c06d89bc7be5f51faea67c6b33bbf73321275db7b632a45.png" />
+<img alt="../_images/a61a41cc5a980887a07757471f0f6186e3cec8d16dab701881b1a139ee3a5752.png" src="../_images/a61a41cc5a980887a07757471f0f6186e3cec8d16dab701881b1a139ee3a5752.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1022,7 +698,7 @@ Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/15485d305f22f34fbe3e669e8e9a27c9f0920950b8ac8b1ddf1b24248a176b12.svg" src="../_images/15485d305f22f34fbe3e669e8e9a27c9f0920950b8ac8b1ddf1b24248a176b12.svg" />
+<img alt="../_images/12f48eb44fb5bea53d85ed905d40c3ea6f4b07b9b48796b87b8e83e30cc31be0.svg" src="../_images/12f48eb44fb5bea53d85ed905d40c3ea6f4b07b9b48796b87b8e83e30cc31be0.svg" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1126,7 +802,7 @@ Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;openbabel.pybel.Molecule object at 0x10a941e90&gt;, &lt;openbabel.pybel.Molecule object at 0x10a941690&gt;, &lt;openbabel.pybel.Molecule object at 0x10a941a50&gt;, &lt;openbabel.pybel.Molecule object at 0x10a941710&gt;, &lt;openbabel.pybel.Molecule object at 0x10a941450&gt;, &lt;openbabel.pybel.Molecule object at 0x10a941350&gt;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;openbabel.pybel.Molecule object at 0x7fce1b58b830&gt;, &lt;openbabel.pybel.Molecule object at 0x7fce1b58b710&gt;, &lt;openbabel.pybel.Molecule object at 0x7fce1b58a360&gt;, &lt;openbabel.pybel.Molecule object at 0x7fce1b589d00&gt;, &lt;openbabel.pybel.Molecule object at 0x7fce1b58b590&gt;, &lt;openbabel.pybel.Molecule object at 0x7fce1b58b500&gt;]
 </pre></div>
 </div>
 </div>
