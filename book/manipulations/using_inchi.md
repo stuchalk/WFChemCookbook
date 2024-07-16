@@ -66,7 +66,7 @@ If you have a [MOL or SDF file](https://en.wikipedia.org/wiki/Chemical_table_fil
 You can also use the following software that you install locally to process the MOL file:
 
 -   [InChI core software](https://www.inchi-trust.org/download-latest-inchi-standard-software/).
--   [OpenBabel](https://openbabel.org/wiki/Main_Page),
+-   [OpenBabel](https://openbabel.org),
 
 to convert a MOL file to InChI or InChIKey.
 
