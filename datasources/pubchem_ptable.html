@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Accessing the Chemical Elements Data from PubChem &#8212; IUPAC FAIR Chemistry Cookbook</title>
   
@@ -15,59 +14,57 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/js/matomo.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'datasources/pubchem_ptable';</script>
+    <script src="../_static/js/matomo.js?v=73f4a96e"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Manipulating Data within a Digital Environment" href="../manipulations.html" />
     <link rel="prev" title="Accessing PubChem through PUG-View" href="pubchem_pugview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -75,19 +72,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -109,12 +110,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -129,9 +138,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
+  
   
   
   
@@ -141,12 +154,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/iupac_and_wf.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/iupac_and_wf.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/iupac_and_wf.jpg" class="logo__image only-light" alt="IUPAC FAIR Chemistry Cookbook - Home"/>
+    <script>document.write(`<img src="../_static/iupac_and_wf.jpg" class="logo__image only-dark" alt="IUPAC FAIR Chemistry Cookbook - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
@@ -157,53 +181,53 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">The FAIR Chemistry Cookbook</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../cooking.html">The Joy of FAIR</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cooking.html">The Joy of FAIR</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../techniques.html">FAIR Techniques</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../tools.html">Tools &amp; Web Services</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tools.html">Tools &amp; Web Services</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/opsin_api.html">OPSIN: Open Parser for Systematic IUPAC Nomenclature</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/opsin_api_jn.html">Using the OPSIN API in Python</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../data_sources.html">Data Sources</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../data_sources.html">Data Sources</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="goldbook_api.html">Terminology: The IUPAC Gold Book</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cas_commonchem.html">CAS Common Chemistry API</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="pubchem.html">Data Repository: PubChem</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 has-children"><a class="reference internal" href="pubchem_pugrest.html">PubChem PUG-REST</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="pubchem.html">Data Repository: PubChem</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="pubchem_pugrest.html">PubChem PUG-REST</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="pubchem_pugrest1.html">Accessing PubChem through PUG-REST - Part I</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pubchem_pugrest2.html">Accessing PubChem through PUG-REST: Part II</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pubchem_pugrest3.html">Accessing PubChem through PUG-REST: Part III</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l3"><a class="reference internal" href="pubchem_pugview.html">PubChem PUG-View</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">PubChem Periodic Table</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../manipulations.html">Data Manipulations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../manipulations.html">Data Manipulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../manipulations/computing_inchis.html">Computing InChIs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../manipulations/dataset_search.html">Finding a Findable Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../manipulations/excel_import.html">Importing data into Excel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../manipulations/gsheets_citations.html">Importing data into Google Sheets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../manipulations/using_inchi.html">Annotation with InChIs</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../usecases.html">Use Cases &amp; Workflows</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../usecases.html">Use Cases &amp; Workflows</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../usecases/iupac_pkadata.html">Reuse of Curated Chemical Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usecases/uvvis_metadata.html">Structured UV/Vis (meta)data for small molecule characterisation</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../about_project.html">About this project</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../about_project.html">About this project</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../contributors.html">Project Contributors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../development.html">Cookbook development</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../worldfair.html">WordFAIR Chemistry</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
 </ul>
@@ -221,7 +245,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -230,14 +254,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -262,14 +286,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/IUPAC/WFChemCookbook/main?urlpath=tree/book/datasources/pubchem_ptable.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -280,14 +304,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://colab.research.google.com/github/IUPAC/WFChemCookbook/blob/main/book/datasources/pubchem_ptable.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onColab"
+   title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_colab.png">
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -408,26 +432,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -472,17 +498,13 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="accessing-the-chemical-elements-data-from-pubchem">
-<h1>Accessing the Chemical Elements Data from PubChem<a class="headerlink" href="#accessing-the-chemical-elements-data-from-pubchem" title="Permalink to this headline">#</a></h1>
+<h1>Accessing the Chemical Elements Data from PubChem<a class="headerlink" href="#accessing-the-chemical-elements-data-from-pubchem" title="Link to this heading">#</a></h1>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-About this interactive <img alt="icons" src="../_images/rocket1.png" /> recipe<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">About this interactive <img alt="icons" src="../_images/rocket1.png" /> recipe</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
 <li><p class="sd-card-text">Author(s): <a class="reference external" href="https://orcid.org/0000-0001-9828-2074">Sunghwan Kim</a></p></li>
 <li><p class="sd-card-text">Reviewer: <a class="reference external" href="https://orcid.org/0000-0001-5404-6934">Samuel Munday</a></p></li>
@@ -882,7 +904,7 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
 </div>
 </div>
 <section id="atomic-mass">
-<h2>1. Atomic Mass<a class="headerlink" href="#atomic-mass" title="Permalink to this headline">#</a></h2>
+<h2>1. Atomic Mass<a class="headerlink" href="#atomic-mass" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">AtomicNumber</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">AtomicMass</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Blue&#39;</span><span class="p">)</span>
@@ -895,12 +917,12 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0, 0.5, &#39;Atomic Mass&#39;)]
 </pre></div>
 </div>
-<img alt="../_images/22906f65265bd775a2f065d67c9be1327e65ade64cca58da1cf27ec1b262ee38.png" src="../_images/22906f65265bd775a2f065d67c9be1327e65ade64cca58da1cf27ec1b262ee38.png" />
+<img alt="../_images/9d7a6f60ebce7dc8f52b19d4cdda7efe46a8fb52a36ab74a1bf86836be5c3c89.png" src="../_images/9d7a6f60ebce7dc8f52b19d4cdda7efe46a8fb52a36ab74a1bf86836be5c3c89.png" />
 </div>
 </div>
 </section>
 <section id="ionization-energy-electron-affinity-electronegativity">
-<h2>2. Ionization Energy, Electron Affinity &amp; Electronegativity<a class="headerlink" href="#ionization-energy-electron-affinity-electronegativity" title="Permalink to this headline">#</a></h2>
+<h2>2. Ionization Energy, Electron Affinity &amp; Electronegativity<a class="headerlink" href="#ionization-energy-electron-affinity-electronegativity" title="Link to this heading">#</a></h2>
 <p>Now we want to look into the periodicity of the ionization energy, electron affinity, and electronegativity among the chemical elements.  These properties are not known for some elements, especially for elements heavier than Lr (Atomic Number=103), as identified in the following code cell.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1080,7 +1102,7 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
 </div>
 </div>
 <section id="ionization-potential">
-<h3>2.1. Ionization Potential<a class="headerlink" href="#ionization-potential" title="Permalink to this headline">#</a></h3>
+<h3>2.1. Ionization Potential<a class="headerlink" href="#ionization-potential" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
@@ -1091,12 +1113,12 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f77038618b338c752790287eff4913b1822f54128ad456fa44b04f544916a8b2.png" src="../_images/f77038618b338c752790287eff4913b1822f54128ad456fa44b04f544916a8b2.png" />
+<img alt="../_images/e5c807519bc65dcb3fc144c1d3d35a3b8bbb3cef471384df85e1d451da2771a5.png" src="../_images/e5c807519bc65dcb3fc144c1d3d35a3b8bbb3cef471384df85e1d451da2771a5.png" />
 </div>
 </div>
 </section>
 <section id="electron-affinity">
-<h3>2.2. Electron Affinity<a class="headerlink" href="#electron-affinity" title="Permalink to this headline">#</a></h3>
+<h3>2.2. Electron Affinity<a class="headerlink" href="#electron-affinity" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
@@ -1107,12 +1129,12 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d83e73a8eee915b1e36ed500cd0f5abc92c17f0a1efce32a83f6aa86f33fab40.png" src="../_images/d83e73a8eee915b1e36ed500cd0f5abc92c17f0a1efce32a83f6aa86f33fab40.png" />
+<img alt="../_images/c1b3f5de32034be6e8dd246a63d941b6d1900c181bf832b916ee68a9f45e4298.png" src="../_images/c1b3f5de32034be6e8dd246a63d941b6d1900c181bf832b916ee68a9f45e4298.png" />
 </div>
 </div>
 </section>
 <section id="electronegativity">
-<h3>2.3. Electronegativity<a class="headerlink" href="#electronegativity" title="Permalink to this headline">#</a></h3>
+<h3>2.3. Electronegativity<a class="headerlink" href="#electronegativity" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
@@ -1123,12 +1145,12 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3b3a5e71c1e612000b9958d0f1b1ebf7b20d0f51c753996ffe8d368ce00ef987.png" src="../_images/3b3a5e71c1e612000b9958d0f1b1ebf7b20d0f51c753996ffe8d368ce00ef987.png" />
+<img alt="../_images/a3bd538f2d4a050851b3c743e6ec33af3badf5442a7ab7795d75871d3da16733.png" src="../_images/a3bd538f2d4a050851b3c743e6ec33af3badf5442a7ab7795d75871d3da16733.png" />
 </div>
 </div>
 </section>
 <section id="comparison-between-ionization-energy-electron-affinity-and-electronegativity">
-<h3>2.4. Comparison between Ionization Energy, Electron Affinity, and Electronegativity<a class="headerlink" href="#comparison-between-ionization-energy-electron-affinity-and-electronegativity" title="Permalink to this headline">#</a></h3>
+<h3>2.4. Comparison between Ionization Energy, Electron Affinity, and Electronegativity<a class="headerlink" href="#comparison-between-ionization-energy-electron-affinity-and-electronegativity" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
@@ -1145,13 +1167,13 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f7b5bccfab94c537967312c188c18185512bf0fea4650ffca4c2ee2e7bc5f22d.png" src="../_images/f7b5bccfab94c537967312c188c18185512bf0fea4650ffca4c2ee2e7bc5f22d.png" />
+<img alt="../_images/324707d78c453a72783a88f75becb297feb5ec2c96cca0cd9e84b17b34853122.png" src="../_images/324707d78c453a72783a88f75becb297feb5ec2c96cca0cd9e84b17b34853122.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="melting-point-and-boiling-point">
-<h2>3. Melting Point and Boiling Point<a class="headerlink" href="#melting-point-and-boiling-point" title="Permalink to this headline">#</a></h2>
+<h2>3. Melting Point and Boiling Point<a class="headerlink" href="#melting-point-and-boiling-point" title="Link to this heading">#</a></h2>
 <p>Now let’s visualize the melting and boiling points of chemical elements. These data are not available for all compounds, so we want to exclude those elements without the necessary data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1296,7 +1318,7 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
 </div>
 <p>The elements with an atomic number greater than 103 do not have melting and boiling point data.  Therefore, we want to exclude those elements by using the <code class="docutils literal notranslate"><span class="pre">df_tmp</span></code> data frame, which was used previously to create the charts for the ionization potential, electron affinity, and electronegativity.</p>
 <section id="melting-point">
-<h3>3.1. Melting Point<a class="headerlink" href="#melting-point" title="Permalink to this headline">#</a></h3>
+<h3>3.1. Melting Point<a class="headerlink" href="#melting-point" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
@@ -1307,12 +1329,12 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/bea2a4a37ec4f79d7a84d59825f9e02222dabf6234b678aecd7a625487d8a885.png" src="../_images/bea2a4a37ec4f79d7a84d59825f9e02222dabf6234b678aecd7a625487d8a885.png" />
+<img alt="../_images/d1ef4691a6bf33fea45b7dd2142acc3c96e90248cd7b75a9f6076de063b496cf.png" src="../_images/d1ef4691a6bf33fea45b7dd2142acc3c96e90248cd7b75a9f6076de063b496cf.png" />
 </div>
 </div>
 </section>
 <section id="boiling-point">
-<h3>3.2. Boiling Point<a class="headerlink" href="#boiling-point" title="Permalink to this headline">#</a></h3>
+<h3>3.2. Boiling Point<a class="headerlink" href="#boiling-point" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
@@ -1323,12 +1345,12 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d8b9ab3c8de47887c853cea0ff49d037b702dcd5beec6a2492a1114a7dc692eb.png" src="../_images/d8b9ab3c8de47887c853cea0ff49d037b702dcd5beec6a2492a1114a7dc692eb.png" />
+<img alt="../_images/38704080061b1129b26299503ee2512aa92a17c3ca603267f664bf26973d7b87.png" src="../_images/38704080061b1129b26299503ee2512aa92a17c3ca603267f664bf26973d7b87.png" />
 </div>
 </div>
 </section>
 <section id="comparison-between-melting-and-boiling-points">
-<h3>3.3. Comparison between Melting and Boiling Points<a class="headerlink" href="#comparison-between-melting-and-boiling-points" title="Permalink to this headline">#</a></h3>
+<h3>3.3. Comparison between Melting and Boiling Points<a class="headerlink" href="#comparison-between-melting-and-boiling-points" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
@@ -1338,13 +1360,13 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/41fa19391d05226bc1625fb063fb532894f9f63be5b68ec3116f3bb3b2522ad5.png" src="../_images/41fa19391d05226bc1625fb063fb532894f9f63be5b68ec3116f3bb3b2522ad5.png" />
+<img alt="../_images/53d0b719659afa450643fec7b24453d10e6a0984f44eb291be598957cee27a32.png" src="../_images/53d0b719659afa450643fec7b24453d10e6a0984f44eb291be598957cee27a32.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="density">
-<h2>4. Density<a class="headerlink" href="#density" title="Permalink to this headline">#</a></h2>
+<h2>4. Density<a class="headerlink" href="#density" title="Link to this heading">#</a></h2>
 <p>Now let’s look into the density of chemical elements.  The density data used here are measured at STP (standard temperature and pressure, 0 °C and 1 atm).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1355,7 +1377,7 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3047ac091655aebec7e3aa9c947ef4d9a91045121945f10d70d55cd4b7208928.png" src="../_images/3047ac091655aebec7e3aa9c947ef4d9a91045121945f10d70d55cd4b7208928.png" />
+<img alt="../_images/5bc16d62d45c1d319efe3d51b7b7873d69fc8175ecc9a06998ac54ad843eafbb.png" src="../_images/5bc16d62d45c1d319efe3d51b7b7873d69fc8175ecc9a06998ac54ad843eafbb.png" />
 </div>
 </div>
 <p>Some elements have very small density values, less than 0.5 g/cm<sup>3</sup>.  This is also shown in the following histogram.</p>
@@ -1370,7 +1392,7 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ad442b6d875d7765da5033a3575501f06c84cd60b2aacddc94bb62e5ad0b8e81.png" src="../_images/ad442b6d875d7765da5033a3575501f06c84cd60b2aacddc94bb62e5ad0b8e81.png" />
+<img alt="../_images/165b51f1a31ce323bc3cc34f2a9ffbd02eaff86f5cc41c44ed43187ef6521f89.png" src="../_images/165b51f1a31ce323bc3cc34f2a9ffbd02eaff86f5cc41c44ed43187ef6521f89.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1515,11 +1537,10 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="pubchem_pugview.html"
@@ -1539,10 +1560,7 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1550,6 +1568,7 @@ DOI: <a class="reference external" href="https://doi.org/10.1515/cti-2020-0006">
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1593,6 +1612,7 @@ By IUPAC WorldFAIR Chemistry D3.2 Project
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -1619,8 +1639,8 @@ Coordination and Support Action under Grant Agreement No. 101058393.
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
