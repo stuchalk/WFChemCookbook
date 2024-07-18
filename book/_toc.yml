@@ -65,3 +65,9 @@ parts:
           - file: worldfair
       - file: glossary
       - file: bibliography
+  - caption: Testing
+    chapters:
+      - file: testing
+        title: Contributions
+        sections:
+          - glob: contributions/*/*
