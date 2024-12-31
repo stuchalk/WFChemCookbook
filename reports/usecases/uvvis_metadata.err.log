@@ -37,32 +37,32 @@ Collecting jcamp
 ----- stdout -----
 [?25hCollecting numpy (from jcamp)
   Downloading numpy-2.2.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
-Collecting datetime (from jcamp)
 ----- stdout -----
+Collecting datetime (from jcamp)
   Downloading DateTime-5.5-py3-none-any.whl.metadata (33 kB)
 ----- stdout -----
 Collecting zope.interface (from datetime->jcamp)
   Downloading zope.interface-7.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (44 kB)
 ----- stdout -----
 Collecting pytz (from datetime->jcamp)
+----- stdout -----
   Downloading pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
 Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.12.8/x64/lib/python3.12/site-packages (from zope.interface->datetime->jcamp) (70.3.0)
 Downloading DateTime-5.5-py3-none-any.whl (52 kB)
+----- stdout -----
 Downloading numpy-2.2.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.1 MB)
 [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/16.1 MB[0m [31m?[0m eta [36m-:--:--[0m
 ----- stdout -----
-[2K   [91m━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━[0m [32m7.6/16.1 MB[0m [31m39.9 MB/s[0m eta [36m0:00:01[0m
------ stdout -----
-[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m16.1/16.1 MB[0m [31m54.6 MB/s[0m eta [36m0:00:00[0m
+[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m16.1/16.1 MB[0m [31m146.6 MB/s[0m eta [36m0:00:00[0m
 [?25hDownloading pytz-2024.2-py2.py3-none-any.whl (508 kB)
-Downloading zope.interface-7.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (264 kB)
 ----- stdout -----
+Downloading zope.interface-7.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (264 kB)
 Building wheels for collected packages: jcamp
 ----- stdout -----
   Building wheel for jcamp (setup.py) ... [?25l-
 ----- stdout -----
  done
-[?25h  Created wheel for jcamp: filename=jcamp-1.2.2-py2.py3-none-any.whl size=10651 sha256=859daf83185ece87e513869a2082ec7bb140c6ee3b7b49e65dda93b0db9a6dda
+[?25h  Created wheel for jcamp: filename=jcamp-1.2.2-py2.py3-none-any.whl size=10651 sha256=df411c1136c3f24de674965ac45e1cf1800a8e9a0b47f8881ab138b757fd18fe
   Stored in directory: /home/runner/.cache/pip/wheels/6a/d1/9f/9599e61ea4096b380977b3e343d144d1705615c3608f9c034d
 Successfully built jcamp
 ----- stdout -----
