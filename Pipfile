@@ -25,6 +25,7 @@ rdkit = ">=2024.3.3"
 seaborn = ">=0.13.2"
 sphinx = ">=7.2.6,<7.3.0"
 sphinxcontrib-applehelp = ">=1.0.8"
+tordnado = ">=6.4.2"
 
 [dev-packages]
 ghp-import = ">=2.1.0"
